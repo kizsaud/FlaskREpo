@@ -1,0 +1,185 @@
+ Starting testcase Tsz7693096c                         |
+]: +------------------------------------------------------------------------------+
+]: +------------------------------------------------------------------------------+
+]: |                 Starting section REP_config_and_verify_setup                 |
+]: +------------------------------------------------------------------------------+
+]: [TC ]: PROCEDURE"
+]: 
+]:                             1. Configure Port-channel 10 between CoreA and Stack
+]:                             2. Configure Port-channel 20 between CoreB and Stack
+]:                             3. Configure REP Egde No-Neighbor on both Port-channel 10 and 20
+]:                             4. Verify REP Ports states along with show cli's
+]:                 
+]: The result of section REP_config_and_verify_setup is => PASSED
+]: +------------------------------------------------------------------------------+
+]: |                 Starting section REP_config_and_verify_test                  |
+]: +------------------------------------------------------------------------------+
+]: 
+]:  
+]:  REP details for Port-channel 10
+]: ['Segment-id: 1 (Primary Edge No-Neighbor)', 'PortID: 08F2700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Open', 'Blocked VLAN: <empty>', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5', 'Configured Load-balancing Block Port: 2', 'Configured Load-balancing Block VLAN: 1-4094', 'STCN Propagate to: none']
+]: 
+]:  REP details for Port-channel 20
+]: ['Port-channel20   REP enabled', 'Segment-id: 1 (Edge No-Neighbor)', 'PortID: 08FC700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Alternate', 'Blocked VLAN: 1-4094', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5']
+]: Caught an exception while executing section REP_config_and_verify_test:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 837, in REP_config_and_verify_test
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: The result of section REP_config_and_verify_test is => ERRORED
+]: The result of testcase Tsz7693096c is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                        Starting testcase Tsz7693111c                         |
+]: +------------------------------------------------------------------------------+
+]: +------------------------------------------------------------------------------+
+]: |                  Starting section REP_L2_convergence_setup                   |
+]: +------------------------------------------------------------------------------+
+]: +..............................................................................+
+]: :       Starting STEP 1: Obtain REP Interface details before Test Start        :
+]: +..............................................................................+
+]: The result of STEP 1: Obtain REP Interface details before Test Start is => ERRORED
+]: Caught an exception while executing section REP_L2_convergence_setup:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 883, in REP_L2_convergence_setup
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: +..........................................................+
+]: :                       STEPS Report                       :
+]: +..........................................................+
+]: STEP 1 - Obtain REP Interface details before Test Start   Errored
+]: ............................................................
+]: The result of section REP_L2_convergence_setup is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                   Starting section REP_L2_convergence_test                   |
+]: +------------------------------------------------------------------------------+
+]: Blocking REP_L2_convergence_test because testcase setup did not pass.
+]: The result of section REP_L2_convergence_test is => BLOCKED
+]: +------------------------------------------------------------------------------+
+]: |                 Starting section REP_L2_convergence_cleanup                  |
+]: +------------------------------------------------------------------------------+
+]: Caught an exception while executing section REP_L2_convergence_cleanup:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1265, in REP_L2_convergence_cleanup
+]:     (IxPort1[1], IxPort2[1]))
+]:   File "/auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/tcl/interpreter.py", line 267, in eval
+]:     raise TclError(self.vars['::errorInfo']) from None
+]: _tkinter.TclError: can't read "streamID": no such variable
+]:     while executing
+]: "ixia::traffic_config   -mode remove -stream_id  $streamID -name REP_L2_TC_upstream -port_handle 1/11/1 -port_handle2 1/11/2"
+]: The result of section REP_L2_convergence_cleanup is => ERRORED
+]: The result of testcase Tsz7693111c is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                        Starting testcase Tsz7693114c                         |
+]: +------------------------------------------------------------------------------+
+]: +------------------------------------------------------------------------------+
+]: |                  Starting section REP_L2_convergence_setup                   |
+]: +------------------------------------------------------------------------------+
+]: +..............................................................................+
+]: :                        Starting STEP 1: Enable Debugs                        :
+]: +..............................................................................+
+]: The result of STEP 1: Enable Debugs is => PASSED
+]: +..............................................................................+
+]: :       Starting STEP 2: Obtain REP Interface details before Test Start        :
+]: +..............................................................................+
+]: The result of STEP 2: Obtain REP Interface details before Test Start is => ERRORED
+]: Caught an exception while executing section REP_L2_convergence_setup:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1386, in REP_L2_convergence_setup
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: +..........................................................+
+]: :                       STEPS Report                       :
+]: +..........................................................+
+]: STEP 1 - Enable Debugs                                Passed
+]: STEP 2 - Obtain REP Interface details before Test Start   Errored
+]: ............................................................
+]: The result of section REP_L2_convergence_setup is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                   Starting section REP_L2_convergence_test                   |
+]: +------------------------------------------------------------------------------+
+]: Blocking REP_L2_convergence_test because testcase setup did not pass.
+]: The result of section REP_L2_convergence_test is => BLOCKED
+]: +------------------------------------------------------------------------------+
+]: |                 Starting section REP_L2_convergence_cleanup                  |
+]: +------------------------------------------------------------------------------+
+]: +..............................................................................+
+]: :    Starting STEP 1: Device Gladiator24-1 (alias=CoreA), type c9300 - Turn    :
+]: :                            off debugs and get logs                           :
+]: +..............................................................................+
+]: The result of STEP 1: Device Gladiator24-1 (alias=CoreA), type c9300 - Turn off debugs and get logs is => PASSED
+]: +..............................................................................+
+]: :    Starting STEP 2: Device Gladiator24-2 (alias=CoreB), type c9300 - Turn    :
+]: :                            off debugs and get logs                           :
+]: +..............................................................................+
+]: The result of STEP 2: Device Gladiator24-2 (alias=CoreB), type c9300 - Turn off debugs and get logs is => PASSED
+]: +..............................................................................+
+]: :    Starting STEP 3: Device Nyquist10G-1 (alias=Stack), type c9300 - Turn     :
+]: :                           off debugs and get logs                            :
+]: +..............................................................................+
+]: The result of STEP 3: Device Nyquist10G-1 (alias=Stack), type c9300 - Turn off debugs and get logs is => PASSED
+]: +..............................................................................+
+]: :    Starting STEP 4: Device Gladiator24-3 (alias=C9300), type c9300 - Turn    :
+]: :                            off debugs and get logs                           :
+]: +..............................................................................+
+]: The result of STEP 4: Device Gladiator24-3 (alias=C9300), type c9300 - Turn off debugs and get logs is => PASSED
+]: +..............................................................................+
+]: :        Starting STEP 5:  Stop and Export EPC pcaps on CoreA and CoreB        :
+]: +..............................................................................+
+]: The result of STEP 5:  Stop and Export EPC pcaps on CoreA and CoreB is => PASSED
+]: +..............................................................................+
+]: :               Starting STEP 6:  Stopping the TRAFFIC from IXIA               :
+]: +..............................................................................+
+]: The result of STEP 6:  Stopping the TRAFFIC from IXIA is => ERRORED
+]: Caught an exception while executing section REP_L2_convergence_cleanup:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1756, in REP_L2_convergence_cleanup
+]:     (IxPort1[1], IxPort2[1]))
+]:   File "/auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/tcl/interpreter.py", line 267, in eval
+]:     raise TclError(self.vars['::errorInfo']) from None
+]: _tkinter.TclError: can't read "streamID": no such variable
+]:     while executing
+]: "ixia::traffic_config   -mode remove -stream_id  $streamID -name REP_L2_TC_upstream -port_handle 1/11/1 -port_handle2 1/11/2"
+]: +..........................................................+
+]: :                       STEPS Report                       :
+]: +..........................................................+
+]: STEP 1 - Device Gladiator24-1 (alias=CoreA), type c9300 - Turn off debugs and get logs    Passed
+]: STEP 2 - Device Gladiator24-2 (alias=CoreB), type c9300 - Turn off debugs and get logs    Passed
+]: STEP 3 - Device Nyquist10G-1 (alias=Stack), type c9300 - Turn off debugs and get logs    Passed
+]: STEP 4 - Device Gladiator24-3 (alias=C9300), type c9300 - Turn off debugs and get logs    Passed
+]: STEP 5 -  Stop and Export EPC pcaps on CoreA and CoreB    Passed
+]: STEP 6 -  Stopping the TRAFFIC from IXIA             Errored
+]: ............................................................
+]: The result of section REP_L2_convergence_cleanup is => ERRORED
+]: The result of testcase Tsz7693114c is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                        Starting testcase Tsz7693115c                         |
+]: +------------------------------------------------------------------------------+
+]: +------------------------------------------------------------------------------+
+]: |                   Starting section REP_Unicast_convergence                   |
+]: +------------------------------------------------------------------------------+
+]: 
+]:  
+]:  REP details for Port-channel 10
+]: ['Segment-id: 1 (Primary Edge No-Neighbor)', 'PortID: 08F2700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Open', 'Blocked VLAN: <empty>', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5', 'Configured Load-balancing Block Port: 2', 'Configured Load-balancing Block VLAN: 1-4094', 'STCN Propagate to: none']
+]: 
+]:  REP details for Port-channel 20
+]: ['Port-channel20   REP enabled', 'Segment-id: 1 (Edge No-Neighbor)', 'PortID: 08FC700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Alternate', 'Blocked VLAN: 1-4094', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5']
+]: Caught an exception while executing section REP_Unicast_convergence:
+]: Traceback (most recent call last):
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1800, in REP_Unicast_convergence
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: The result of section REP_Unicast_convergence is => ERRORED
+]: The result of testcase Tsz7693115c is => ERRORED
+]: +------------------------------------------------------------------------------+
+]: |                           Starting common cleanup                            |
+]: +------------------------------------------------------------------------------+
+]: +------------------------------------------------------------------------------+
+]: |                    Starting subsection post_router_check                     |
+]: +------------------------------------------------------------------------------+
+]: The result of subsection post_router_check is => PASSED
+]: +------------------------------------------------------------------------------+
+]: |                       Starting subsection clean_device                       |
+]: +------------------------------------------------------------------------------+
+]: The result of subsection clean_device is => PASSED
+]: The result of common cleanup is => PASSED

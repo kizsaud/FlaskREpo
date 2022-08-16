@@ -1,0 +1,7 @@
+email:
+  default_domain: cisco.com
+  smtp:
+    host: mail.cisco.com
+    port: 25
+filetransfer:
+  subnet: 10.0.0.0/8

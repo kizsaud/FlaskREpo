@@ -1,0 +1,192 @@
+components:
+  job:
+    class: <class 'pyats.easypy.job.Job'>
+  mailbot:
+    class: <class 'pyats.easypy.email.MailBot'>
+  reporter:
+    class: <class 'pyats.cisco.aereporter.CiscoAEReporter'>
+  runinfo:
+    class: <class 'pyats.cisco.trade.TradeRunInfo'>
+plugins:
+  ArchiveConfigPlugin:
+    class: <class 'pyats.easypy.plugins.debug.ArchiveConfigPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.debug
+    name: ArchiveConfigPlugin
+    order: 55.0
+  BusinessTelemetryPlugin:
+    class: <class 'pyats.cisco.businesstelemetry.BusinessTelemetryPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.cisco.businesstelemetry
+    name: BusinessTelemetryPlugin
+    order: 155.0
+  CollectionPlugin:
+    class: <class 'plugin_bundle.plugins.collection.plugin.CollectionPlugin'>
+    enabled: true
+    kwargs: {}
+    module: collection.plugin
+    name: CollectionPlugin
+    order: 101
+  CopyJobfileToRunInfo:
+    class: <class 'pyats.easypy.plugins.debug.CopyJobfileToRunInfo'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.debug
+    name: CopyJobfileToRunInfo
+    order: 30.0
+  CopyManifestFileToRunInfo:
+    class: <class 'pyats.easypy.plugins.debug.CopyManifestFileToRunInfo'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.debug
+    name: CopyManifestFileToRunInfo
+    order: 31.0
+  'CoverageCollection:':
+    class: <class 'ctc.plugin.CoverageCollection'>
+    enabled: true
+    kwargs: {}
+    module: ctc.plugin
+    name: 'CoverageCollection:'
+    order: 154.0
+  EnvironmentDebugPlugin:
+    class: <class 'pyats.easypy.plugins.debug.EnvironmentDebugPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.debug
+    name: EnvironmentDebugPlugin
+    order: 70.0
+  FileServerPlugin:
+    class: <class 'genie.libs.filetransferutils.fileserver.plugin.FileServerPlugin'>
+    enabled: true
+    kwargs: {}
+    module: genie.libs.filetransferutils.fileserver.plugin
+    name: FileServerPlugin
+    order: 61
+  HTMLLogsPlugin:
+    class: <class 'pyats.easypy.plugins.htmllogs.HTMLLogsPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.htmllogs
+    name: HTMLLogsPlugin
+    order: 130.0
+  'HealthCheckPlugin:':
+    class: <class 'genie.libs.health.plugin.HealthCheckPlugin'>
+    enabled: true
+    kwargs: {}
+    module: genie.libs.health.plugin
+    name: 'HealthCheckPlugin:'
+    order: 152.0
+  ImageMd5Plugin:
+    class: <class 'genie.libs.cisco.plugins.md5.ImageMd5Plugin'>
+    enabled: false
+    kwargs: {}
+    module: genie.libs.cisco.plugins.md5
+    name: ImageMd5Plugin
+    order: 9000.0
+  JobLogPlugin:
+    class: <class 'pyats.easypy.plugins.logs.JobLogPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.logs
+    name: JobLogPlugin
+    order: 40.0
+  KleenexPlugin:
+    class: <class 'pyats.easypy.plugins.kleenex.KleenexPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.kleenex
+    name: KleenexPlugin
+    order: 90.0
+  LiveviewPlugin:
+    class: <class 'pyats.easypy.plugins.logs.LiveviewPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.logs
+    name: LiveviewPlugin
+    order: 35.0
+  LogWarnings:
+    class: <class 'pyats.easypy.plugins.logs.LogWarnings'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.logs
+    name: LogWarnings
+    order: 10.0
+  'MapleCleanPlugin:':
+    class: <class 'genie.libs.sdk.triggers.blitz.maple_converter.plugin.MapleCleanPlugin'>
+    enabled: true
+    kwargs: {}
+    module: genie.libs.sdk.triggers.blitz.maple_converter
+    name: 'MapleCleanPlugin:'
+    order: 130
+  ReplayPlugin:
+    class: <class 'pyats.easypy.plugins.replay.ReplayPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.replay
+    name: ReplayPlugin
+    order: 140.0
+  RerunPlugin:
+    class: <class 'pyats.easypy.plugins.rerun.RerunPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.rerun
+    name: RerunPlugin
+    order: 110.0
+  RuninfoSymlinkPlugin:
+    class: <class 'pyats.easypy.plugins.runinfo.RuninfoSymlinkPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.runinfo
+    name: RuninfoSymlinkPlugin
+    order: 20.0
+  TaskLogPlugin:
+    class: <class 'pyats.easypy.plugins.logs.TaskLogPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.logs
+    name: TaskLogPlugin
+    order: 50.0
+  TaskResultsPlugin:
+    class: <class 'pyats.easypy.plugins.runinfo.TaskResultsPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.runinfo
+    name: TaskResultsPlugin
+    order: 100.0
+  TelemetryPlugin:
+    class: <class 'pyats.cisco.telemetry.TelemetryPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.cisco.telemetry
+    name: TelemetryPlugin
+    order: 156.0
+  TestbedPlugin:
+    class: <class 'pyats.easypy.plugins.testbed.TestbedPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.testbed
+    name: TestbedPlugin
+    order: 60.0
+  TopologyUpPlugin:
+    class: <class 'pyats.contrib.plugins.topoup_plugin.topoup.TopologyUpPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.contrib.plugins.topoup_plugin.topoup
+    name: TopologyUpPlugin
+    order: 150.0
+  WebExTeamsNotifyPlugin:
+    class: <class 'pyats.contrib.plugins.webex_plugin.webex.WebExTeamsNotifyPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.contrib.plugins.webex_plugin.webex
+    name: WebExTeamsNotifyPlugin
+    order: 151.0
+  XunitPlugin:
+    class: <class 'pyats.easypy.plugins.xunit.XunitPlugin'>
+    enabled: true
+    kwargs: {}
+    module: pyats.easypy.plugins.xunit
+    name: XunitPlugin
+    order: 120.0

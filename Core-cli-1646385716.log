@@ -1,0 +1,378 @@
+
+2022-03-04 01:21:56,882: %UNICON-INFO: +++ Core logfile /ws/shmandal-sjc/pyats2021/users/shmandal/runinfo/biryani_job.2022Mar04_01:20:22.085731/Core-cli-1646385716.log +++
+
+2022-03-04 01:21:56,883: %UNICON-INFO: +++ Unicon plugin iosxe/cat9k +++
+Trying 172.21.227.108...
+
+
+2022-03-04 01:21:56,913: %UNICON-INFO: +++ connection to spawn: telnet 172.21.227.108 2037, id: 139783382912976 +++
+
+2022-03-04 01:21:56,913: %UNICON-INFO: connection to Core
+Connected to 172.21.227.108.
+Escape character is '^]'.
+
+Core#
+
+2022-03-04 01:21:57,725: %UNICON-INFO: +++ initializing handle +++
+
+2022-03-04 01:21:57,809: %UNICON-INFO: +++ Core with via 'a': executing command 'term length 0' +++
+term length 0
+Core#
+
+2022-03-04 01:21:58,053: %UNICON-INFO: +++ Core with via 'a': executing command 'term width 0' +++
+term width 0
+Core#
+
+2022-03-04 01:21:58,322: %UNICON-INFO: +++ Core with via 'a': executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 2022-02-25_16.34_mizhu
+Cisco IOS Software [Cupertino], Catalyst L3 Switch Software (CAT9K_IOSXE), Experimental Version 17.8.20220226:002814 [BLD_V178_THROTTLE_S2C_20220224_010558-36-g6ed00783b6c8-dirty:/nobackup/mizhu/xfsu9359 101]
+Copyright (c) 1986-2022 by Cisco Systems, Inc.
+Compiled Fri 25-Feb-22 16:30 by mizhu
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2022 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+BOOTLDR: System Bootstrap, Version 17.8.1r[FC1], RELEASE SOFTWARE (P)
+
+Core uptime is 33 minutes
+Uptime for this control processor is 34 minutes
+System returned to ROM by Reload Command at 00:45:45 PST Fri Mar 4 2022
+System restarted at 00:48:35 PST Fri Mar 4 2022
+System image file is "bootflash:packages.conf"
+Last reload reason: Reload Command
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+
+Technology Package License Information: 
+
+------------------------------------------------------------------------------
+Technology-package                                     Technology-package
+Current                        Type                       Next reboot  
+------------------------------------------------------------------------------
+network-advantage   	Smart License                 	 network-advantage   
+dna-advantage       	Subscription Smart License    	 dna-advantage                 
+AIR License Level: AIR DNA Advantage
+Next reload AIR license Level: AIR DNA Advantage
+
+
+Smart Licensing Status: Smart Licensing Using Policy
+
+cisco C9500-24Y4C (X86) processor with 2883488K/6147K bytes of memory.
+Processor board ID CAT2244L50F
+2 Virtual Ethernet interfaces
+24 TwentyFive Gigabit Ethernet interfaces
+4 Hundred Gigabit Ethernet interfaces
+32768K bytes of non-volatile configuration memory.
+15993800K bytes of physical memory.
+11161600K bytes of Bootflash at bootflash:.
+1638400K bytes of Crash Files at crashinfo:.
+
+Base Ethernet MAC Address          : 70:b3:17:8f:53:a0
+Motherboard Assembly Number        : 4874
+Motherboard Serial Number          : CAT2244L50F
+Model Revision Number              : V02
+Motherboard Revision Number        : 2
+Model Number                       : C9500-24Y4C         
+System Serial Number               : CAT2244L50F
+
+Core#
+
+2022-03-04 01:22:02,182: %UNICON-INFO: +++ Core with via 'a': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Core(config)#no logging console
+Core(config)#line console 0
+Core(config-line)#exec-timeout 0
+Core(config-line)#end
+Core#
+
+2022-03-04 01:22:02,891: %UNICON-INFO: +++ Core with via 'a': executing command 'clear logging' +++
+clear logging
+Clear logging buffer [confirm]
+Core#
+
+2022-03-04 01:22:12,290: %UNICON-INFO: +++ Core with via 'a': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Core(config)#hostname Core
+Core(config)#interface GigabitEthernet0/0
+Core(config-if)#vrf forwarding Mgmt-vrf
+Core(config-if)#ip addr 10.8.4.116 255.255.0.0
+Core(config-if)#negotiation auto
+Core(config-if)#no shut
+Core(config-if)#ip routing
+Core(config)#ip route vrf Mgmt-vrf 0.0.0.0 0.0.0.0 10.8.0.1
+Core(config)#enable secret Secret12345
+Core(config)#aaa new-model
+Core(config)#aaa authentication login default local
+Core(config)#aaa authorization exec default local
+Core(config)#username admin privilege 15 secret Secret12345
+Core(config)#username shishir privilege 15 secret lab
+Core(config)#line vty 0 16
+Core(config-line)# exec-timeout 0 0
+Core(config-line)# transport input all
+Core(config-line)#line vty 0 31
+Core(config-line)# exec-timeout 0 0
+Core(config-line)# transport input all
+Core(config-line)#end
+Core#
+
+2022-03-04 01:22:14,319: %UNICON-INFO: +++ Core with via 'a': executing command 'write memory' +++
+write memory
+Building configuration...
+[OK]
+Core#
+
+2022-03-04 01:22:38,549: %UNICON-INFO: +++ Core with via 'a': configure +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+Core(config)#!
+Core(config)#ipv6 nd reachable-time 3600000
+Core(config)#router ospf 2
+Core(config-router)# network 172.16.254.1 0.0.0.0 area 0
+Core(config-router)# network 192.168.254.0 0.0.0.255 area 0
+Core(config-router)# bfd all-interfaces
+Core(config-router)#!
+Core(config-router)#interface Port-channel2
+Core(config-if)# description Topo1 D1-9300-SVL
+Core(config-if)# ospfv3 retransmit-interval 10
+Core(config-if)# ip ospf retransmit-interval 10
+Core(config-if)#!
+Core(config-if)#interface Port-channel3
+Core(config-if)# description Topo1 A1-N-9300-Standalone
+Core(config-if)# ospfv3 retransmit-interval 10
+Core(config-if)# ip ospf retransmit-interval 10
+Core(config-if)#!
+Core(config-if)#end
+Core#
+
+2022-03-04 01:22:40,200: %UNICON-INFO: +++ Core with via 'a': executing command 'write memory' +++
+write memory
+Building configuration...
+[OK]
+Core#
+
+2022-03-04 01:22:46,298: %UNICON-INFO: +++ Core with via 'a': executing command 'show ip ospf neighbor detail' +++
+show ip ospf neighbor detail
+ Neighbor 1.1.1.3, interface address 192.168.254.6, interface-id 55
+    In the area 0 via interface Port-channel3
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 192.168.254.6 BDR is 192.168.254.5
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:35
+    Neighbor is up for 00:33:18
+    Index 1/1/1, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+ Neighbor 1.1.1.1, interface address 192.168.254.1, interface-id 145
+    In the area 0 via interface Port-channel2
+    BFD enabled, BFD session UP
+    Neighbor priority is 1, State is FULL, 12 state changes
+    DR is 192.168.254.2 BDR is 192.168.254.1
+    Options is 0x12 in Hello (E-bit, L-bit)
+    Options is 0x52 in DBD (E-bit, L-bit, O-bit)
+    LLS Options is 0x1 (LR)
+    Dead timer due in 00:00:37
+    Neighbor is up for 00:11:18
+    Index 1/2/2, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Core#
+
+2022-03-04 01:22:48,017: %UNICON-INFO: +++ Core with via 'a': executing command 'show ip ospf retransmission-list' +++
+show ip ospf retransmission-list
+
+            OSPF Router with ID (1.1.1.2) (Process ID 2)
+
+ Neighbor 1.1.1.3, interface Port-channel3 address 192.168.254.6
+
+ Neighbor 1.1.1.1, interface Port-channel2 address 192.168.254.1
+Core#
+
+2022-03-04 01:22:48,493: %UNICON-INFO: +++ Core with via 'a': executing command 'show ip ospf neighbor detail | include retransmission' +++
+show ip ospf neighbor detail | include retransmission
+    Index 1/1/1, retransmission queue length 0, number of retransmission 1
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+    Index 1/2/2, retransmission queue length 0, number of retransmission 1
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Core#
+
+2022-03-04 01:22:49,196: %UNICON-INFO: +++ Core with via 'a': executing command 'show ospfv3 neighbor detail' +++
+show ospfv3 neighbor detail
+
+          OSPFv3 1 address-family ipv4 (router-id 1.1.1.2)
+
+ Neighbor 1.1.1.3, interface address 192.168.254.6
+    In the area 0 via interface Port-channel3
+    Neighbor: interface-id 56, link-local address FE80::229:C2FF:FE69:96EC
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 1.1.1.3 BDR is 1.1.1.2
+    Options is 0x000112 in Hello (E-Bit, R-Bit, AF-Bit)
+    Options is 0x000112 in DBD (E-Bit, R-Bit, AF-Bit)
+    Dead timer due in 00:00:34
+    Neighbor is up for 00:33:29
+    Index 1/1/1, retransmission queue length 0, number of retransmission 1
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+
+ Neighbor 1.1.1.1, interface address 192.168.254.1
+    In the area 0 via interface Port-channel2
+    Neighbor: interface-id 148, link-local address FE80::229:C2FF:FE11:58FE
+    Neighbor priority is 1, State is FULL, 10 state changes
+    DR is 1.1.1.2 BDR is 1.1.1.1
+    Options is 0x000112 in Hello (E-Bit, R-Bit, AF-Bit)
+    Options is 0x000112 in DBD (E-Bit, R-Bit, AF-Bit)
+    Last neighbor graceful restart 00:11:06 ago
+    Dead timer due in 00:00:37
+    Neighbor is up for 00:32:12
+    Index 2/3/3, retransmission queue length 0, number of retransmission 2
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+
+          OSPFv3 1 address-family ipv6 (router-id 1.1.1.2)
+
+ Neighbor 1.1.1.3
+    In the area 0 via interface Port-channel3
+    Neighbor: interface-id 56, link-local address FE80::229:C2FF:FE69:96EC
+    Neighbor priority is 1, State is FULL, 6 state changes
+    DR is 1.1.1.3 BDR is 1.1.1.2
+    Options is 0x000013 in Hello (V6-Bit, E-Bit, R-Bit)
+    Options is 0x000013 in DBD (V6-Bit, E-Bit, R-Bit)
+    Dead timer due in 00:00:38
+    Neighbor is up for 00:33:20
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+
+ Neighbor 1.1.1.1
+    In the area 0 via interface Port-channel2
+    Neighbor: interface-id 148, link-local address FE80::229:C2FF:FE11:58FE
+    Neighbor priority is 1, State is FULL, 10 state changes
+    DR is 1.1.1.2 BDR is 1.1.1.1
+    Options is 0x000013 in Hello (V6-Bit, E-Bit, R-Bit)
+    Options is 0x000013 in DBD (V6-Bit, E-Bit, R-Bit)
+    Last neighbor graceful restart 00:11:06 ago
+    Dead timer due in 00:00:34
+    Neighbor is up for 00:32:22
+    Index 2/3/3, retransmission queue length 0, number of retransmission 2
+    First 0x0(0)/0x0(0)/0x0(0) Next 0x0(0)/0x0(0)/0x0(0)
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Core#
+
+2022-03-04 01:22:52,579: %UNICON-INFO: +++ Core with via 'a': executing command 'show ospfv3 neighbor detail | include retransmission' +++
+show ospfv3 neighbor detail | include retransmission
+    Index 1/1/1, retransmission queue length 0, number of retransmission 1
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+    Index 2/3/3, retransmission queue length 0, number of retransmission 2
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+    Index 1/1/1, retransmission queue length 0, number of retransmission 0
+    Last retransmission scan length is 0, maximum is 0
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+    Index 2/3/3, retransmission queue length 0, number of retransmission 2
+    Last retransmission scan length is 1, maximum is 1
+    Last retransmission scan time is 0 msec, maximum is 0 msec
+Core#
+
+2022-03-04 01:22:53,691: %UNICON-INFO: +++ Core with via 'a': executing command 'show ospfv3 retransmission-list' +++
+show ospfv3 retransmission-list
+
+          OSPFv3 1 address-family ipv4 (router-id 1.1.1.2)
+
+ Neighbor 1.1.1.3, interface Port-channel3
+
+ Neighbor 1.1.1.1, interface Port-channel2
+
+          OSPFv3 1 address-family ipv6 (router-id 1.1.1.2)
+
+ Neighbor 1.1.1.3, interface Port-channel3
+
+ Neighbor 1.1.1.1, interface Port-channel2
+Core#
+
+2022-03-04 01:28:33,651: %UNICON-INFO: +++ Core with via 'a': executing command 'clear logging' +++
+clear logging
+Clear logging buffer [confirm]
+Core#
+
+2022-03-04 01:28:33,969: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include udld error detected on' +++
+show logging | include udld error detected on
+Core#
+
+2022-03-04 01:28:34,248: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include in err-disable state' +++
+show logging | include in err-disable state
+Core#
+
+2022-03-04 01:28:34,535: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include Too many retransmissions' +++
+show logging | include Too many retransmissions
+Core#
+
+2022-03-04 01:28:34,826: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include retransmissions' +++
+show logging | include retransmissions
+Core#
+
+2022-03-04 01:28:35,095: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include from DOWN to DOWN' +++
+show logging | include from DOWN to DOWN
+Core#
+
+2022-03-04 01:28:35,383: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include SFF8472-3-THRESHOLD_VIOLATION' +++
+show logging | include SFF8472-3-THRESHOLD_VIOLATION
+Core#
+
+2022-03-04 01:28:35,673: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include err-disable' +++
+show logging | include err-disable
+Core#
+
+2022-03-04 01:28:35,943: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include ERR_DISABLE' +++
+show logging | include ERR_DISABLE
+Core#
+
+2022-03-04 01:28:36,220: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include Duplicate address' +++
+show logging | include Duplicate address
+Core#
+
+2022-03-04 01:28:36,498: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include STORM_CONTROL' +++
+show logging | include STORM_CONTROL
+Core#
+
+2022-03-04 01:28:36,770: %UNICON-INFO: +++ Core with via 'a': executing command 'show logging | include Neighbor Down' +++
+show logging | include Neighbor Down
+Core#

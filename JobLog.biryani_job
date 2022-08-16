@@ -1,0 +1,13 @@
+3: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[part=3.1/3][pid=4084965][pname=MainProcess]: +------------------------------------------------------------------------------+
+4: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[part=3.2/3][pid=4084965][pname=MainProcess]: |                              Clean Information                               |
+5: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[part=3.3/3][pid=4084965][pname=MainProcess]: +------------------------------------------------------------------------------+
+6: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[pid=4084965][pname=MainProcess]: {'bringup': {}, 'cleaners': {}, 'devices': {}}
+
+7: sjc-ads-7048: 2022-03-04T01:20:30: %ATS-6-INFO: %[pid=4084965][pname=MainProcess]: Checking all devices are up and ready is disabled, '--check-all-devices-up' must be set to True in case of pyats runs or '-check_all_devices_up' set to True in case of legacy easypy runs
+0: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[pid=4087524][pname=Task-1]: Starting task execution: Task-1
+1: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[pid=4087524][pname=Task-1]:     test harness = pyats.aetest
+2: sjc-ads-7048: 2022-03-04T01:20:30: %EASYPY-6-INFO: %[pid=4087524][pname=Task-1]:     testscript   = /ws/shmandal-sjc/biryani/biryani.py
+8: sjc-ads-7048: 2022-03-04T01:35:49: %EASYPY-6-INFO: %[pid=4084965][pname=MainProcess]: TIMS result uploading is not enabled
+9: sjc-ads-7048: 2022-03-04T01:35:49: %CISCO-6-INFO: %[pid=4084965][pname=MainProcess]: Start Telemetry - Test
+10: sjc-ads-7048: 2022-03-04T01:35:52: %CISCO-6-INFO: %[pid=4084965][pname=MainProcess]: Posted data to Kafka returning status code 200 within time 0:00:00.039578
+11: sjc-ads-7048: 2022-03-04T01:35:52: %CONTRIB-6-INFO: %[pid=4084965][pname=MainProcess]: WebEx Token not given as argument or in config. No WebEx notification will be sent

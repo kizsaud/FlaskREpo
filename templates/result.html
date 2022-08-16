@@ -1,0 +1,437 @@
+<table>
+<thead>
+<tr><th style="text-align: right;">  </th><th>TESTCASE                                                       </th><th>Result  </th><th>From:                                                                                                  </th><th>Reason, if any                                                                                                </th><th>errored reason in order, if any  </th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;"> 0</td><td>TC1_FunctionalTests[loopdetect_triggers=no_errdisable_recovery]</td><td>FAILED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &quot; The result of PostContextProcessor-3 &#x27;pyATS Health Check cpu&#x27; is =&gt; FAILED&quot;, &#x27;&#x27;, &#x27;&#x27;)</td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;none found&#x27;)                                                                        </td><td>start0
+ Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestRemoveNetconf&#x27; uid=&#x27;TestRemoveNetconf&#x27;&gt;, &lt;weakproxy at 0x7f532e33b0e8 to Steps at 0x7f532e34efd0&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 1932, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 1935, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 1</td><td>TC1_FunctionalTests[loopdetect_triggers=errdisable_recovery]   </td><td>FAILED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &quot; The result of PostContextProcessor-3 &#x27;pyATS Health Check cpu&#x27; is =&gt; FAILED&quot;, &#x27;&#x27;, &#x27;&#x27;)</td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;none found&#x27;)                                                                        </td><td>start1
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestIpDhcpFailure&#x27; uid=&#x27;TestIpDhcpFailure&#x27;&gt;, &lt;weakproxy at 0x7f532e31ea98 to Steps at 0x7f532e32d128&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2006, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2009, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 2</td><td>TC1_FunctionalTests[loopdetect_triggers=loopdetect_sourceport] </td><td>FAILED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &quot; The result of PostContextProcessor-3 &#x27;pyATS Health Check cpu&#x27; is =&gt; FAILED&quot;, &#x27;&#x27;, &#x27;&#x27;)</td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;none found&#x27;)                                                                        </td><td>start2
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestAaaDown&#x27; uid=&#x27;TestAaaDown&#x27;&gt;, &lt;weakproxy at 0x7f532e34ca98 to Steps at 0x7f532d8ca400&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2205, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2208, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 3</td><td>TC1_FunctionalTests[loopdetect_triggers=reload]                </td><td>ERRORED </td><td>(&#x27;]: The result of section test_TC1_SomeName is =&gt; ERRORED&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)                   </td><td>(&#x27;]: genie.metaparser.util.exceptions.SchemaEmptyParserError: Parser Output is empty&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)</td><td>start3
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;DeviceTrackingDbCleared&#x27; uid=&#x27;DeviceTrackingDbCleared&#x27;&gt;, &lt;weakproxy at 0x7f532e33b318 to Steps at 0x7f532e32d710&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2377, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2380, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 4</td><td>TC1_FunctionalTests[loopdetect_triggers=sso]                   </td><td>PASSED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;None&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)                                                                       </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;None&#x27;, &#x27;&#x27;)                                                                              </td><td>start4
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestAuthenticatorAndTimeout&#x27; uid=&#x27;TestAuthenticatorAndTimeout&#x27;&gt;, &lt;weakproxy at 0x7f532e34c548 to Steps at 0x7f532d8ca6d8&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2579, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2582, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 5</td><td>TC2_Negative                                                   </td><td>PASSED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;None&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)                                                                       </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;None&#x27;, &#x27;&#x27;)                                                                              </td><td>start5
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;AccessVlanChange&#x27; uid=&#x27;AccessVlanChange&#x27;&gt;, &lt;weakproxy at 0x7f532e30c4f8 to Steps at 0x7f532e32d518&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2819, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 2822, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 6</td><td>TC3_STP                                                        </td><td>FAILED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &quot; The result of PostContextProcessor-3 &#x27;pyATS Health Check cpu&#x27; is =&gt; FAILED&quot;, &#x27;&#x27;, &#x27;&#x27;)</td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;none found&#x27;)                                                                        </td><td>start6
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestAccessSessionHostMode&#x27; uid=&#x27;TestAccessSessionHostMode&#x27;&gt;, &lt;weakproxy at 0x7f532e33bbd8 to Steps at 0x7f532e3c5b38&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3049, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3052, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 7</td><td>TC4_configure_replace                                          </td><td>FAILED  </td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &quot; The result of PostContextProcessor-3 &#x27;pyATS Health Check cpu&#x27; is =&gt; FAILED&quot;, &#x27;&#x27;, &#x27;&#x27;)</td><td>(&#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;none found&#x27;)                                                                        </td><td>start7
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;TestIpDeleteAccessVlan&#x27; uid=&#x27;TestIpDeleteAccessVlan&#x27;&gt;, &lt;weakproxy at 0x7f532e34c368 to Steps at 0x7f532d8ca908&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3281, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3284, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 8</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start8
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ShutAccessVlan&#x27; uid=&#x27;ShutAccessVlan&#x27;&gt;, &lt;weakproxy at 0x7f532e34c228 to Steps at 0x7f532e34e470&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3508, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3511, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;"> 9</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start9
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;RemoveAccessVlan&#x27; uid=&#x27;RemoveAccessVlan&#x27;&gt;, &lt;weakproxy at 0x7f532e33b4a8 to Steps at 0x7f532e34ee80&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3718, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3721, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">10</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start10
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthAllSuccess&#x27; uid=&#x27;ConcurrentAuthAllSuccess&#x27;&gt;, &lt;weakproxy at 0x7f532e30cb88 to Steps at 0x7f532d8ca6d8&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3927, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 3930, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">11</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start11
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthMabFailDot1xPass&#x27; uid=&#x27;ConcurrentAuthMabFailDot1xPass&#x27;&gt;, &lt;weakproxy at 0x7f532e34ce58 to Steps at 0x7f532d8e9668&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4081, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4084, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">12</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start12
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthDot1xFailMabPass&#x27; uid=&#x27;ConcurrentAuthDot1xFailMabPass&#x27;&gt;, &lt;weakproxy at 0x7f532e34cef8 to Steps at 0x7f532d8cacc0&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4234, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4237, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">13</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start13
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthAllFail&#x27; uid=&#x27;ConcurrentAuthAllFail&#x27;&gt;, &lt;weakproxy at 0x7f532e33bb38 to Steps at 0x7f532d8ce278&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4390, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4393, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">14</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start14
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthPriMabFailDot1xPass&#x27; uid=&#x27;ConcurrentAuthPriMabFailDot1xPass&#x27;&gt;, &lt;weakproxy at 0x7f532e3115e8 to Steps at 0x7f532e320da0&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4595, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4598, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">15</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start15
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ConcurrentAuthPriMabPassDot1xFail&#x27; uid=&#x27;ConcurrentAuthPriMabPassDot1xFail&#x27;&gt;, &lt;weakproxy at 0x7f532e34c7c8 to Steps at 0x7f532d8efb00&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4739, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4742, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">16</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start16
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ErrDisableSecurityViolation&#x27; uid=&#x27;ErrDisableSecurityViolation&#x27;&gt;, &lt;weakproxy at 0x7f532e311638 to Steps at 0x7f532d8895c0&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4897, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 4900, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">17</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start17
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ProtectSecurityViolation&#x27; uid=&#x27;ProtectSecurityViolation&#x27;&gt;, &lt;weakproxy at 0x7f532e30cbd8 to Steps at 0x7f532d889518&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5059, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5062, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">18</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start18
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;ReplaceSecurityViolation&#x27; uid=&#x27;ReplaceSecurityViolation&#x27;&gt;, &lt;weakproxy at 0x7f532e311138 to Steps at 0x7f532e3be898&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5228, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5231, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+<tr><td style="text-align: right;">19</td><td>                                                               </td><td>        </td><td>                                                                                                       </td><td>                                                                                                              </td><td>start19
+]: Caught error while executing target in child process-0:
+]:   args = (&lt;class &#x27;RestrictSecurityViolation&#x27; uid=&#x27;RestrictSecurityViolation&#x27;&gt;, &lt;weakproxy at 0x7f532e34c778 to Steps at 0x7f532e3be7b8&gt;, &#x27;https://10.126.109.107/api/assurance/v1/events/view?entityId={}&amp;offset=1&amp;limit=3000&amp;entityType=wired_client&amp;startTime={}&amp;endTime={}&amp;order=asc&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/service/?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/host/{}/neighbor-topology?timestamp={}&#x27;, &#x27;https://10.126.109.107/api/assurance/v1/issue?entityId={}&amp;entityName=macAddr&amp;limit=1000&amp;offset=1&amp;startTime={}&amp;endTIme={}&amp;sortBy=priority&amp;order=asc&#x27;, &lt;Logger pyats.aetest.testscript.wired_client_assurance (DEBUG)&gt;, &lt;uniq.common.base.Base object at 0x7f532e8fceb8&gt;, &#x27;uut1&#x27;)
+]:   kwargs = {}
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5389, in test_case
+]:     basic_check(Variables, dev, self.parent.parameters)
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 388, in basic_check
+]:     raise Exception(&#x27;Verification failed Client is not Up&#x27;)
+]: Exception: Verification failed Client is not Up
+]: 
+]: During handling of the above exception, another exception occurred:
+]: 
+]: Traceback (most recent call last):
+]:   File &quot;/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/async_/parallelcall.py&quot;, line 90, in run
+]:     result += (True, self._target(*self._args, **self._kwargs))
+]:   File &quot;/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/wired_client_assurance.py&quot;, line 5392, in test_case
+]:     raise ChildProcessException()
+]: pyats.async_.exceptions.ChildProcessException                                  </td></tr>
+</tbody>
+</table><!DOCTYPE html>
+<html>
+  <head>
+    <title>Flask app</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  </head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pass Python variable to Javascript</title>
+</head>
+<body>
+
+
+ <script>   
+  var selectvalue = document.getElementById("selectvalue"), test = {{ name | tojson }};
+function displayvar(){
+    for(var i = 0; i<test.length; i++)
+    console.log(test[i])
+    console.log('%cEND TESTCASE', 'color: red; font-size: 30px;');
+ 
+}
+</script>
+<button class="displayvar" onclick="displayvar();">Display log on console</button>
+
+
+
+</body>
+</html>
+ 

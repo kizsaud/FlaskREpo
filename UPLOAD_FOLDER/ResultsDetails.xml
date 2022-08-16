@@ -1,0 +1,1041 @@
+<?xml version="1.0" ?>
+<aereport xmlns="http://wwwin-ats.cisco.com/xml/schema/aereport" xmlns:schemaLocation="http://wwwin-ats.cisco.com/xml/schema/aereport.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <testsuite>
+    <starttime>2022-07-27T04:23:41</starttime>
+    <initinfo>
+      <name>RENN_test_job_1721_2</name>
+      <params>
+        <cli>/auto/iconatest/production/hcl/pyats3.6.4/bin/easypy RENN_test_job_1721_2.py -testbed RENN.yaml -mailto tetitus@cisco.com,udasubra@cisco.com,mohammm4@cisco.com</cli>
+        <mailto/>
+        <report>
+          <type/>
+          <sort>0</sort>
+          <outofrange>0</outofrange>
+          <uniquesuites>0</uniquesuites>
+          <count_common_result_summary>1</count_common_result_summary>
+          <sem/>
+        </report>
+        <rerun>0</rerun>
+        <cleantype>easyclean</cleantype>
+        <uniquetid>0</uniquetid>
+        <max>
+          <errors>10</errors>
+          <jobs>-1</jobs>
+        </max>
+        <reason/>
+        <tidRange/>
+      </params>
+      <jobid>RENN_test_job_1721_2.2022Jul27_04:21:57.381622</jobid>
+      <ats>
+        <path>/auto/iconatest/production/hcl/pyats3.6.4</path>
+        <version>21.10.2</version>
+      </ats>
+      <CONFIG/>
+      <host>ng3k-tb8nd.cisco.com</host>
+      <owner/>
+      <submitter>tetitus</submitter>
+      <user>tetitus</user>
+      <topology/>
+      <logfile begin="0" size="-1"/>
+      <tbautoselect/>
+      <release/>
+      <image/>
+      <testbed>ng3k-tb8nd</testbed>
+    </initinfo>
+    <jobexecution>
+      <starttime>2022-07-27T04:23:41</starttime>
+      <runinfo/>
+      <testscript>
+        <starttime>2022-07-27T04:24:24</starttime>
+        <initinfo>
+          <script>
+            <name>RENN_main1_1721.py</name>
+            <path>/auto/iconatest/users/tetitus/pyats/projects/RENN</path>
+          </script>
+          <pargs/>
+          <taskid>Task-1</taskid>
+          <description>
+
+This is based off of RENN_main1.py
+
+How to run:
+Invoke 32-bit PyATS instance
+Can install one via -
+/auto/pyats/bin/pyats install --version 19.0 --32bit
+Source 32bit TCL-ATS
+source /auto/pysw/ats/env.sh
+
+Backup instance - &lt;461&gt; :: source /auto/iconatest53/users/anbharat/pyats/env.sh
+
+easypy RENN_test_job_1721.py -testbed shmandal_testbed.yaml -mailto shmandal
+
+# Sanity + L2
+easypy RENN_test_job_1721.py -testbed shmandal_testbed.yaml -mailto shmandal --testcase &quot;['sanity', '03']&quot;
+
+Environment variables required for IXIA
+
+# 6.30GA IXIA
+export IXIA_HOME = &quot;/auto/iconatest/ixia/client/ixia6.30GALinux&quot;
+export TCLLIBPATH = &quot;/auto/iconatest/ixia/client/ixia6.30GALinux/lib&quot;
+export IXIA_VERSION = &quot;6.30&quot;
+export HLT_HOME = &quot;/ws/hoshen-sjc/IxOS/HLT_4.00&quot;
+export IXIA_HLTAPI_LIBRARY = &quot;$IXIA_HOME/lib:$HLT_HOME&quot;
+export IXLOAD_5_10_151_48_INSTALLDIR = &quot;/auto/iconatest/ixia/client/ixia6.30GALinux/lib/IxLoad6.30-GA/&quot;
+
+# IxOS 6.90 / IxNetwork 7.50
+export IXIA_HOME = &quot;/auto/oibu-ats/ixia_hltapi/IxOS690_IxN750&quot;
+export IXIA_HLTAPI_LIBRARY = &quot;/auto/oibu-ats/ixia_hltapi/IxOS690_IxN750/lib&quot;
+export IXIA_IOS = &quot;/auto/oibu-ats/ixia_hltapi/IxOS690_IxN750/&quot;
+export IXIA_TCL_DIR = &quot;/auto/oibu-ats/ixia_hltapi/IxOS690_IxN750/lib&quot;
+export IXIA_VERSION = &quot;6.90&quot;
+export TCLLIBPATH = &quot;/auto/oibu-ats/ixia_hltapi/IxOS690_IxN750/lib&quot;
+
+#
+export IXIA_HOME = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GALinux&quot;
+export IXIA_HLTAPI_LIBRARY = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GALinux/lib&quot;
+export IXIA_IOS = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GALinux&quot;
+export IXIA_TCL_DIR = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GALinux/lib&quot;
+export IXIA_VERSION = &quot;6.90&quot;
+export TCLLIBPATH = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GALinux/lib&quot;
+
+ixia6.90GA
+export IXIA_HOME = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GA&quot;
+export IXIA_HLTAPI_LIBRARY = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GA/lib&quot;
+export IXIA_IOS = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GA&quot;
+export IXIA_TCL_DIR = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GA/lib&quot;
+export IXIA_VERSION = &quot;6.90&quot;
+export TCLLIBPATH = &quot;/auto/iconatest-bgl/ixia/client/ixia6.90GA/lib&quot;
+
+Divya Original
+export TREX_PATH = &quot;/auto/iconatest-bgl/users/divshank/pyats/trex_client/stl&quot;
+export IXNETWORK_HOME = /auto/iconatest-bgl/ixia/client/IXIA_8.50EA/lib
+export IXIA_HOME = /auto/iconatest-bgl/ixia/client/IXIA_8.50EA/lib
+export IXIA_VERSION = HLTSET225
+export IXIA_HLTAPI_LIBRARY = /auto/iconatest-bgl/ixia/client/IXIA_8.50EA/lib
+export IXNETWORK_HOME = /auto/iconatest-bgl/ixia/client/IXIA_8.50EA/lib
+export TCLLIBPATH = /auto/iconatest-bgl/ixia/client/IXIA_8.50EA/lib /auto/pysw/ats/regression/lib/hss/onfly /auto/pysw/ats/regression/lib/hss/earlgen /auto/pysw/ats/regression/lib/hss/ConfigSync /auto/pysw/ats/regression/lib/hss/GarbageDetector
+
+
+Test with
+
+On IxNetwork VM make sure IxNetwork TCL Server is running with port 8014
+Shortcut should point to
+r&quot;C:\Program Files (x86)\Ixia\IxNetwork\7.50-GA\IxNetwork.exe&quot; -tclPort 8014
+
+&lt;196&gt; :: tclsh
+% package require Ixia
+Tcl 8.4 is installed on 32bit architecture.
+Using products based on HLTSET182
+Tcl Client is running Ixia Software version: 6.90
+Loaded IxTclHal 6.90
+Loaded IxTclServices 6.90
+Loaded IxTclProtocol 7.50.1087.175
+Loaded IxTclNetwork 7.50.1009.20
+Loaded Mpexpr 1.0
+HLT release 4.97.121.10
+Loaded ixia_hl_lib-7.50
+4.97
+%
+
+Ensure that on IxNetwork the ports are up and green with no Version Mismatch errors
+
+SCRIPT NAME  |  Convergence test with RENN configuration on 9300/3850 stack
+EDCS DOCUMENT  |  XXXXXXXXX                                            
+
+SCRIPT OBJECTIVE  |  Convergence test with RENN                           
+below scenerios :                                  
+1.L2 traffic                                       
+2.L3 unicast traffic                               
+3.L3 multicast traffic                             
+5.Port channel interface                           
+6.Port channel with alternate L3 interface         
+7.switchover                                       
+
+AUTOMATION Engineer  |  
+Shishir Mandal &lt;shmandal@cisco.com&gt;
+Divyashree Shankaraiah &lt;divshank@cisco.com&gt;          
+
+SCRIPT VERSION  |  V02                                                 
+Copyright (c) 2019 Cisco, Inc.                              
+All rights reserved.                                   
+
+
+todo fixme 
+
+add clear console lines logic 
+change edisn--CoreB g1/0/1 te1/0/1 interface ??? keeps going down 
+add rep debugs - common setup , write a proc maybe 
+
+</description>
+          <logfile begin="0" size="-1">TaskLog.Task-1</logfile>
+        </initinfo>
+        <runinfo/>
+        <commonSetup>
+          <starttime>2022-07-27T04:24:24</starttime>
+          <name>commonSetup</name>
+          <description>
+    RENN 17.2.1 COMMON SETUP
+    </description>
+          <xref>
+            <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+            <line>330</line>
+          </xref>
+          <logfile begin="1450" size="128162">TaskLog.Task-1</logfile>
+          <runinfo/>
+          <result mode="auto">passed</result>
+          <stoptime>2022-07-27T04:33:11</stoptime>
+          <runtime>00:08:47</runtime>
+          <subSection>
+            <starttime>2022-07-27T04:24:24</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>335</line>
+            </xref>
+            <id md5="" name="validate_topology">
+              <tc>validate_topology</tc>
+            </id>
+            <name>validate_topology</name>
+            <description> Load testbed YAML </description>
+            <logfile begin="2005" size="1725">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>+------------------------------------------------------------------------------+
+|                             Validating Topology                              |
++------------------------------------------------------------------------------+</diag>
+            </runinfo>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:24:24</stoptime>
+            <runtime>00:00:00</runtime>
+            <extra>{}</extra>
+          </subSection>
+          <subSection>
+            <starttime>2022-07-27T04:24:24</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>354</line>
+            </xref>
+            <id md5="" name="connect_to_devices">
+              <tc>connect_to_devices</tc>
+            </id>
+            <name>connect_to_devices</name>
+            <description>
+        Connect to each node in the network CoreA , CoreB, Core, UUT, IXIA
+        </description>
+            <logfile begin="3730" size="41807">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>+------------------------------------------------------------------------------+
+|                            Connect to each Device                            |
++------------------------------------------------------------------------------+</diag>
+              <diag>Unable to fetch type/model for NEWTON device Nyquist10G-1(default)</diag>
+              <diag>
+ Beginning package require Ixia - please be patient 
+ </diag>
+              <diag> 
+ package require Ixia complete 
+</diag>
+              <diag>
+ Importing local Ixia libraries complete 
+ </diag>
+            </runinfo>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:30:47</stoptime>
+            <runtime>00:06:23</runtime>
+            <extra>{}</extra>
+          </subSection>
+          <subSection>
+            <starttime>2022-07-27T04:30:47</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>637</line>
+            </xref>
+            <id md5="" name="pre_router_check">
+              <tc>pre_router_check</tc>
+            </id>
+            <name>pre_router_check</name>
+            <description> Run pre-router check before the test </description>
+            <logfile begin="45537" size="14151">TaskLog.Task-1</logfile>
+            <runinfo/>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:30:59</stoptime>
+            <runtime>00:00:12</runtime>
+            <extra>{}</extra>
+          </subSection>
+          <subSection>
+            <starttime>2022-07-27T04:30:59</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>661</line>
+            </xref>
+            <id md5="" name="add_switch_configuration">
+              <tc>add_switch_configuration</tc>
+            </id>
+            <name>add_switch_configuration</name>
+            <description>
+        Configure L2 Topology
+        </description>
+            <logfile begin="59688" size="69792">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Skipping shut_noshut_default_all_interfaces</diag>
+              <diag>no interface Port-channel 10
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 10
+                                    ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 20
+                                    ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 20
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 10
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 10
+                                    ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 20
+                                    ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 20
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 10
+no interface Port-channel 10
+                          ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 10
+no interface vlan 10
+              ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface vlan 20
+no interface vlan 20
+              ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 20
+no interface Port-channel 20
+                          ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>+------------------------------------------------------------------------------+
+|                       Add Base Config To Each Device                         |
++------------------------------------------------------------------------------+</diag>
+              <diag>+------------------------------------------------------------------------------+
+|                          Begin L2/L3 configuration                           |
++------------------------------------------------------------------------------+</diag>
+              <diag>+------------------------------------------------------------------------------+
+|                             STP/Vlan Config ....                             |
++------------------------------------------------------------------------------+</diag>
+              <diag>Configure VLANs explicitly on each node since VTP is off</diag>
+              <diag>Configure VLANs explicitly on each node since VTP is off</diag>
+              <diag>Configure VLANs explicitly on each node since VTP is off</diag>
+              <diag>Configure VLANs explicitly on each node since VTP is off</diag>
+              <diag>+------------------------------------------------------------------------------+
+|               KEEP THIS PORT TURNED OFF TO PREVENT A LOOP !!!                |
++------------------------------------------------------------------------------+</diag>
+              <diag>Sleep 5 seconds for Port-channel to come up and for STP to converge for all VLANs</diag>
+              <diag>Sleep 15 seconds</diag>
+            </runinfo>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:33:11</stoptime>
+            <runtime>00:02:12</runtime>
+            <extra>{}</extra>
+          </subSection>
+        </commonSetup>
+        <testcase>
+          <starttime>2022-07-27T04:33:11</starttime>
+          <initinfo>
+            <id md5="" name="Tsz7693096c">
+              <tc>Tsz7693096c</tc>
+            </id>
+            <name>Tsz7693096c</name>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>795</line>
+            </xref>
+            <description/>
+            <swversion>None</swversion>
+            <hwversion>None</hwversion>
+            <fwversion>None</fwversion>
+            <tstversion>None</tstversion>
+            <logfile begin="129612" size="10149">TaskLog.Task-1</logfile>
+          </initinfo>
+          <runinfo/>
+          <section>
+            <starttime>2022-07-27T04:33:11</starttime>
+            <name>REP_config_and_verify_setup</name>
+            <description> </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>797</line>
+            </xref>
+            <logfile begin="130173" size="3401">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>+------------------------------------------------------------------------------+
+|              Verify Show cli's of RENN and basic functionality               |
++------------------------------------------------------------------------------+</diag>
+              <diag>+------------------------------------------------------------------------------+
+|     ***********************Test case setup is ready*********************     |
++------------------------------------------------------------------------------+</diag>
+            </runinfo>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:33:11</stoptime>
+            <runtime>00:00:00</runtime>
+          </section>
+          <section>
+            <starttime>2022-07-27T04:33:11</starttime>
+            <name>REP_config_and_verify_test</name>
+            <description> </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>821</line>
+            </xref>
+            <logfile begin="133574" size="6046">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Caught an exception while executing section REP_config_and_verify_test:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 837, in REP_config_and_verify_test
+    for x in Interface_rep_info_port2)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:33:12</stoptime>
+            <runtime>00:00:01</runtime>
+          </section>
+          <result mode="auto">errored</result>
+          <stoptime>2022-07-27T04:33:12</stoptime>
+          <runtime>00:00:01</runtime>
+        </testcase>
+        <testcase>
+          <starttime>2022-07-27T04:33:12</starttime>
+          <initinfo>
+            <id md5="" name="Tsz7693111c">
+              <tc>Tsz7693111c</tc>
+            </id>
+            <name>Tsz7693111c</name>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>851</line>
+            </xref>
+            <description>
+    Testcase tc_03_REP_L2_convergence
+    Send L2 traffic bidirectional and measure Traffic Convergence
+    </description>
+            <swversion>None</swversion>
+            <hwversion>None</hwversion>
+            <fwversion>None</fwversion>
+            <tstversion>None</tstversion>
+            <logfile begin="139761" size="11377">TaskLog.Task-1</logfile>
+          </initinfo>
+          <runinfo/>
+          <section>
+            <starttime>2022-07-27T04:33:12</starttime>
+            <name>REP_L2_convergence_setup</name>
+            <description>
+        REP_L2_convergence_setup
+        Configure IXIA interfaces and traffic streams
+        </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>857</line>
+            </xref>
+            <logfile begin="140322" size="5968">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Caught an exception while executing section REP_L2_convergence_setup:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 883, in REP_L2_convergence_setup
+    for x in Interface_rep_info_port2)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:33:17</stoptime>
+            <runtime>00:00:05</runtime>
+            <step>
+              <name>Obtain REP Interface details before Test Start</name>
+              <id>STEP 1</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:33:15</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>872</line>
+              </xref>
+              <logfile begin="141505" size="2946">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">errored</result>
+              <stoptime>2022-07-27T04:33:17</stoptime>
+              <runtime>00:00:02</runtime>
+              <extra>{}</extra>
+            </step>
+          </section>
+          <section>
+            <starttime>2022-07-27T04:33:17</starttime>
+            <name>REP_L2_convergence_test</name>
+            <description>
+        REP_L2_convergence_test
+        Run traffic
+        Trigger event - shut/noshut of Primary REP port
+        Measure Traffic Convergence as per ixia_traffic_tolerance
+        Repeat as per defined num_l2_loops
+        </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1010</line>
+            </xref>
+            <logfile begin="146290" size="875">TaskLog.Task-1</logfile>
+            <runinfo/>
+            <result mode="auto">blocked</result>
+            <stoptime>2022-07-27T04:33:17</stoptime>
+            <runtime>00:00:00</runtime>
+          </section>
+          <section>
+            <starttime>2022-07-27T04:33:17</starttime>
+            <name>REP_L2_convergence_cleanup</name>
+            <description> </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1247</line>
+            </xref>
+            <logfile begin="147165" size="3832">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>+------------------------------------------------------------------------------+
+|                        Stopping the TRAFFIC from IXIA                        |
++------------------------------------------------------------------------------+</diag>
+              <diag>Caught an exception while executing section REP_L2_convergence_cleanup:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 1265, in REP_L2_convergence_cleanup
+    (IxPort1[1], IxPort2[1]))
+  File &quot;/auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/tcl/interpreter.py&quot;, line 267, in eval
+    raise TclError(self.vars['::errorInfo']) from None
+_tkinter.TclError: can't read &quot;streamID&quot;: no such variable
+    while executing
+&quot;ixia::traffic_config   -mode remove -stream_id  $streamID -name REP_L2_TC_upstream -port_handle 1/11/1 -port_handle2 1/11/2&quot;
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:33:17</stoptime>
+            <runtime>00:00:00</runtime>
+          </section>
+          <result mode="auto">errored</result>
+          <stoptime>2022-07-27T04:33:17</stoptime>
+          <runtime>00:00:05</runtime>
+        </testcase>
+        <testcase>
+          <starttime>2022-07-27T04:33:17</starttime>
+          <initinfo>
+            <id md5="" name="Tsz7693114c">
+              <tc>Tsz7693114c</tc>
+            </id>
+            <name>Tsz7693114c</name>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1294</line>
+            </xref>
+            <description>
+    Testcase tc_03_REP_L2_convergence
+    Send L2 traffic bidirectional and measure Traffic Convergence
+    </description>
+            <swversion>None</swversion>
+            <hwversion>None</hwversion>
+            <fwversion>None</fwversion>
+            <tstversion>None</tstversion>
+            <logfile begin="151138" size="99898">TaskLog.Task-1</logfile>
+          </initinfo>
+          <runinfo/>
+          <section>
+            <starttime>2022-07-27T04:33:17</starttime>
+            <name>REP_L2_convergence_setup</name>
+            <description>
+        REP_L2_convergence_setup
+        Configure IXIA interfaces and traffic streams
+        </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1300</line>
+            </xref>
+            <logfile begin="151699" size="74009">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Caught an exception while executing section REP_L2_convergence_setup:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 1386, in REP_L2_convergence_setup
+    for x in Interface_rep_info_port2)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:34:12</stoptime>
+            <runtime>00:00:55</runtime>
+            <step>
+              <name>Enable Debugs</name>
+              <id>STEP 1</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:33:30</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1327</line>
+              </xref>
+              <logfile begin="160778" size="59991">TaskLog.Task-1</logfile>
+              <runinfo>
+                <diag>                        ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-1</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-1</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-1</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-1</diag>
+                <diag>                        ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-2</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-2</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-2</diag>
+                <diag>                                                       ^
+% Invalid input detected at '^' marker.
+
+Gladiator24-2</diag>
+                <diag>set platform soft trace fed switch 1 ifm_main debug
+                                         ^
+% Invalid input detected at '^' marker.
+
+Nyquist10G-1</diag>
+                <diag>set platform soft trace fed switch 2 ifm_main debug
+                                         ^
+% Invalid input detected at '^' marker.
+
+Nyquist10G-1</diag>
+                <diag>set platform soft trace fed switch 3 ifm_main debug
+                                         ^
+% Invalid input detected at '^' marker.
+
+Nyquist10G-1</diag>
+              </runinfo>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:11</stoptime>
+              <runtime>00:00:41</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name>Obtain REP Interface details before Test Start</name>
+              <id>STEP 2</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:11</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1375</line>
+              </xref>
+              <logfile begin="220769" size="2946">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">errored</result>
+              <stoptime>2022-07-27T04:34:12</stoptime>
+              <runtime>00:00:01</runtime>
+              <extra>{}</extra>
+            </step>
+          </section>
+          <section>
+            <starttime>2022-07-27T04:34:12</starttime>
+            <name>REP_L2_convergence_test</name>
+            <description>
+        REP_L2_convergence_test
+        Run traffic
+        Trigger event - shut/noshut of Primary REP port
+        Measure Traffic Convergence as per ixia_traffic_tolerance
+        Repeat as per defined num_l2_dmc_loops
+        </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1507</line>
+            </xref>
+            <logfile begin="225708" size="875">TaskLog.Task-1</logfile>
+            <runinfo/>
+            <result mode="auto">blocked</result>
+            <stoptime>2022-07-27T04:34:12</stoptime>
+            <runtime>00:00:00</runtime>
+          </section>
+          <section>
+            <starttime>2022-07-27T04:34:12</starttime>
+            <name>REP_L2_convergence_cleanup</name>
+            <description> </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1689</line>
+            </xref>
+            <logfile begin="226583" size="24312">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Caught an exception while executing section REP_L2_convergence_cleanup:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 1756, in REP_L2_convergence_cleanup
+    (IxPort1[1], IxPort2[1]))
+  File &quot;/auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/tcl/interpreter.py&quot;, line 267, in eval
+    raise TclError(self.vars['::errorInfo']) from None
+_tkinter.TclError: can't read &quot;streamID&quot;: no such variable
+    while executing
+&quot;ixia::traffic_config   -mode remove -stream_id  $streamID -name REP_L2_TC_upstream -port_handle 1/11/1 -port_handle2 1/11/2&quot;
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:34:33</stoptime>
+            <runtime>00:00:21</runtime>
+            <step>
+              <name>Device Gladiator24-1 (alias=CoreA), type c9300 - Turn off debugs and get logs</name>
+              <id>STEP 1</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:12</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1698</line>
+              </xref>
+              <logfile begin="227690" size="4643">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:17</stoptime>
+              <runtime>00:00:05</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name>Device Gladiator24-2 (alias=CoreB), type c9300 - Turn off debugs and get logs</name>
+              <id>STEP 2</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:17</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1698</line>
+              </xref>
+              <logfile begin="232333" size="4379">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:21</stoptime>
+              <runtime>00:00:04</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name>Device Nyquist10G-1 (alias=Stack), type c9300 - Turn off debugs and get logs</name>
+              <id>STEP 3</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:21</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1698</line>
+              </xref>
+              <logfile begin="236712" size="2886">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:23</stoptime>
+              <runtime>00:00:02</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name>Device Gladiator24-3 (alias=C9300), type c9300 - Turn off debugs and get logs</name>
+              <id>STEP 4</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:23</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1698</line>
+              </xref>
+              <logfile begin="239598" size="4497">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:27</stoptime>
+              <runtime>00:00:04</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name> Stop and Export EPC pcaps on CoreA and CoreB</name>
+              <id>STEP 5</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:27</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1724</line>
+              </xref>
+              <logfile begin="244095" size="1550">TaskLog.Task-1</logfile>
+              <runinfo/>
+              <result mode="auto">passed</result>
+              <stoptime>2022-07-27T04:34:33</stoptime>
+              <runtime>00:00:06</runtime>
+              <extra>{}</extra>
+            </step>
+            <step>
+              <name> Stopping the TRAFFIC from IXIA</name>
+              <id>STEP 6</id>
+              <index>0</index>
+              <description/>
+              <continue_>1</continue_>
+              <starttime>2022-07-27T04:34:33</starttime>
+              <xref>
+                <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+                <line>1743</line>
+              </xref>
+              <logfile begin="245645" size="1773">TaskLog.Task-1</logfile>
+              <runinfo>
+                <diag>+------------------------------------------------------------------------------+
+|                        Stopping the TRAFFIC from IXIA                        |
++------------------------------------------------------------------------------+</diag>
+              </runinfo>
+              <result mode="auto">errored</result>
+              <stoptime>2022-07-27T04:34:33</stoptime>
+              <runtime>00:00:00</runtime>
+              <extra>{}</extra>
+            </step>
+          </section>
+          <result mode="auto">errored</result>
+          <stoptime>2022-07-27T04:34:33</stoptime>
+          <runtime>00:01:16</runtime>
+        </testcase>
+        <testcase>
+          <starttime>2022-07-27T04:34:33</starttime>
+          <initinfo>
+            <id md5="" name="Tsz7693115c">
+              <tc>Tsz7693115c</tc>
+            </id>
+            <name>Tsz7693115c</name>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1785</line>
+            </xref>
+            <description/>
+            <swversion>None</swversion>
+            <hwversion>None</hwversion>
+            <fwversion>None</fwversion>
+            <tstversion>None</tstversion>
+            <logfile begin="251036" size="6244">TaskLog.Task-1</logfile>
+          </initinfo>
+          <runinfo/>
+          <section>
+            <starttime>2022-07-27T04:34:33</starttime>
+            <name>REP_Unicast_convergence</name>
+            <description> </description>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>1786</line>
+            </xref>
+            <logfile begin="251597" size="5542">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>Caught an exception while executing section REP_Unicast_convergence:
+Traceback (most recent call last):
+  File &quot;/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py&quot;, line 1800, in REP_Unicast_convergence
+    for x in Interface_rep_info_port2)
+ValueError: dictionary update sequence element #0 has length 1; 2 is required
+</diag>
+            </runinfo>
+            <result mode="auto">errored</result>
+            <stoptime>2022-07-27T04:34:34</stoptime>
+            <runtime>00:00:01</runtime>
+          </section>
+          <result mode="auto">errored</result>
+          <stoptime>2022-07-27T04:34:34</stoptime>
+          <runtime>00:00:01</runtime>
+        </testcase>
+        <commonCleanup>
+          <starttime>2022-07-27T04:34:35</starttime>
+          <name>commonCleanup</name>
+          <description>
+    Common Cleanup Section
+    Subsections:
+    clean_device
+    </description>
+          <xref>
+            <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+            <line>2176</line>
+          </xref>
+          <logfile begin="257280" size="64253">TaskLog.Task-1</logfile>
+          <runinfo/>
+          <result mode="auto">passed</result>
+          <stoptime>2022-07-27T04:35:51</stoptime>
+          <runtime>00:01:16</runtime>
+          <subSection>
+            <starttime>2022-07-27T04:34:35</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>2185</line>
+            </xref>
+            <id md5="" name="post_router_check">
+              <tc>post_router_check</tc>
+            </id>
+            <name>post_router_check</name>
+            <description> Run post-router check before the test </description>
+            <logfile begin="257841" size="54042">TaskLog.Task-1</logfile>
+            <runinfo/>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:35:30</stoptime>
+            <runtime>00:00:55</runtime>
+            <extra>{}</extra>
+          </subSection>
+          <subSection>
+            <starttime>2022-07-27T04:35:30</starttime>
+            <xref>
+              <file>/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py</file>
+              <line>2196</line>
+            </xref>
+            <id md5="" name="clean_device">
+              <tc>clean_device</tc>
+            </id>
+            <name>clean_device</name>
+            <description> clean_device </description>
+            <logfile begin="311883" size="9516">TaskLog.Task-1</logfile>
+            <runinfo>
+              <diag>+------------------------------------------------------------------------------+
+|                                COMMON_CLEANUP                                |
++------------------------------------------------------------------------------+</diag>
+              <diag>Executing Common Cleanup</diag>
+              <diag>no interface Port-channel 20
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>no interface Port-channel 10
+                                                ^
+% Invalid input detected at '^' marker.
+
+
+</diag>
+              <diag>Cleaning up IXIA</diag>
+            </runinfo>
+            <result mode="auto">passed</result>
+            <stoptime>2022-07-27T04:35:51</stoptime>
+            <runtime>00:00:21</runtime>
+            <extra>{}</extra>
+          </subSection>
+        </commonCleanup>
+        <stoptime>2022-07-27T04:35:51</stoptime>
+        <runtime>00:11:27</runtime>
+        <summary>
+          <abort>0</abort>
+          <pass>2</pass>
+          <passx>0</passx>
+          <fail>0</fail>
+          <block>0</block>
+          <skip>0</skip>
+          <error>4</error>
+          <never_ran>0</never_ran>
+          <unknown>0</unknown>
+          <total>6</total>
+          <success_rate>33.33</success_rate>
+        </summary>
+      </testscript>
+      <testscript>
+        <starttime>2022-07-27T04:36:45</starttime>
+        <initinfo>
+          <script>
+            <name/>
+            <path/>
+          </script>
+          <pargs/>
+          <taskid>PostJobPlugin-14</taskid>
+          <description/>
+          <logfile begin="0" size="-1"/>
+        </initinfo>
+        <runinfo/>
+        <stoptime>2022-07-27T04:36:45</stoptime>
+        <runtime>00:00:00</runtime>
+        <summary>
+          <abort>0</abort>
+          <pass>0</pass>
+          <passx>0</passx>
+          <fail>0</fail>
+          <block>0</block>
+          <skip>0</skip>
+          <error>0</error>
+          <never_ran>0</never_ran>
+          <unknown>0</unknown>
+          <total>0</total>
+          <success_rate>0.0</success_rate>
+        </summary>
+      </testscript>
+      <result mode="auto"/>
+      <stoptime>2022-07-27T04:35:54</stoptime>
+      <runtime>00:12:13</runtime>
+    </jobexecution>
+    <tims bgPost="False">
+      <dnsname/>
+      <post>
+        <status/>
+        <cmd/>
+      </post>
+    </tims>
+    <runinfo/>
+    <archivefile>/auto/iconatest/production/hcl/pyats3.6.4/users/tetitus/archive/22-07/RENN_test_job_1721_2.2022Jul27_04:21:57.381622.zip</archivefile>
+    <stoptime>2022-07-27T04:35:54</stoptime>
+    <runtime>00:12:13</runtime>
+    <summary>
+      <abort>0</abort>
+      <pass>2</pass>
+      <passx>0</passx>
+      <fail>0</fail>
+      <block>0</block>
+      <skip>0</skip>
+      <error>4</error>
+      <never_ran>0</never_ran>
+      <unknown>0</unknown>
+      <total>6</total>
+      <success_rate>33.33</success_rate>
+    </summary>
+  </testsuite>
+</aereport>

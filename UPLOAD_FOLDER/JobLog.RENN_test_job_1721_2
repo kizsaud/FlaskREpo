@@ -1,0 +1,57 @@
+3: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=3.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/topology/device.py:58:
+4: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=3.2/3][pid=11971][pname=MainProcess]: DeprecationWarning: Device Gladiator24-1 'tacacs.username' is deprecated in the testbed YAML.  This key has been moved to device 'credentials'.
+5: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=3.3/3][pid=11971][pname=MainProcess]:   self._deprecation_check()
+6: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=6.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/topology/device.py:58:
+7: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=6.2/3][pid=11971][pname=MainProcess]: DeprecationWarning: Device Gladiator24-1 'passwords.tacacs' is  deprecated in the testbed YAML.  Use 'credentials' instead.
+8: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=6.3/3][pid=11971][pname=MainProcess]:   self._deprecation_check()
+9: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=9.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+10: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=9.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device Gladiator24-1 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+11: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=9.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+12: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=12.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+13: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=12.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device Gladiator24-2 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+14: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=12.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+15: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=15.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+16: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=15.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device Nyquist10G-1 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+17: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=15.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+18: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=18.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+19: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=18.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device Gladiator24-3 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+20: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=18.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+21: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=21.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+22: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=21.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device ixia OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+23: ng3k-tb8nd.cisco.com: 2022-07-27T04:21:59: %WARNINGS-4-WARNING: %[part=21.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+24: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:40: %EASYPY-6-INFO: %[part=24.1/3][pid=11971][pname=MainProcess]: +------------------------------------------------------------------------------+
+25: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:40: %EASYPY-6-INFO: %[part=24.2/3][pid=11971][pname=MainProcess]: |                              Clean Information                               |
+26: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:40: %EASYPY-6-INFO: %[part=24.3/3][pid=11971][pname=MainProcess]: +------------------------------------------------------------------------------+
+27: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %EASYPY-6-INFO: %[pid=11971][pname=MainProcess]: {'bringup': {}, 'cleaners': {}, 'devices': {}}
+
+28: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %PLUGIN_BUNDLE-4-WARNING: %[pid=11971][pname=MainProcess]: No uut devices for CRFT collection, running on all devices in testbed YAML
+29: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %PLUGIN_BUNDLE-3-ERROR: %[pid=11971][pname=MainProcess]: There is no IOSXE device in the testbed
+30: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %PLUGIN_BUNDLE-4-WARNING: %[pid=11971][pname=MainProcess]: No uut devices for Btrace collection, running on all devices in testbed YAML
+31: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %PLUGIN_BUNDLE-3-ERROR: %[pid=11971][pname=MainProcess]: There is no IOSXE device in the testbed
+32: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %ATS-6-INFO: %[pid=11971][pname=MainProcess]: Checking all devices are up and ready is disabled, '--check-all-devices-up' must be set to True in case of pyats runs or '-check_all_devices_up' set to True in case of legacy easypy runs
+33: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %ATS-6-INFO: %[pid=11971][pname=MainProcess]: Not enabling ctc/cflow plugin as argument '-coverage' not provided by the user. Disabling ctc/cflow collection plugin.
+34: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=34.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/topology/device.py:58:
+35: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=34.2/3][pid=11971][pname=MainProcess]: DeprecationWarning: Device nyquist1-sjc24 'tacacs.username' is deprecated in the testbed YAML.  This key has been moved to device 'credentials'.
+36: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=34.3/3][pid=11971][pname=MainProcess]:   self._deprecation_check()
+37: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=37.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+38: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=37.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device nyquist1-sjc24 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+39: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=37.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+40: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=40.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+41: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=40.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device nyquist3-sjc24 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+42: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=40.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+43: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=43.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+44: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=43.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device nyquist4-sjc24 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+45: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=43.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+46: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=46.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+47: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=46.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device beluga2 OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+48: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=46.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+49: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=49.1/3][pid=11971][pname=MainProcess]: /auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/genie/libs/conf/device/__init__.py:49:
+50: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=49.2/3][pid=11971][pname=MainProcess]: UnsupportedDeviceOsWarning: Device ixia OS is unknown; Extended Device functionality will not be available: mandatory field 'os' was not given in the yaml file
+51: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %WARNINGS-4-WARNING: %[part=49.3/3][pid=11971][pname=MainProcess]:   UnsupportedDeviceOsWarning)
+0: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %EASYPY-6-INFO: %[pid=13155][pname=Task-1]: Starting task execution: Task-1
+1: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %EASYPY-6-INFO: %[pid=13155][pname=Task-1]:     test harness = pyats.aetest
+2: ng3k-tb8nd.cisco.com: 2022-07-27T04:23:41: %EASYPY-6-INFO: %[pid=13155][pname=Task-1]:     testscript   = /auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py
+52: ng3k-tb8nd.cisco.com: 2022-07-27T04:35:54: %EASYPY-6-INFO: %[pid=11971][pname=MainProcess]: TIMS result uploading is not enabled
+53: ng3k-tb8nd.cisco.com: 2022-07-27T04:35:54: %CISCO-6-INFO: %[pid=11971][pname=MainProcess]: Start Telemetry - Test
+54: ng3k-tb8nd.cisco.com: 2022-07-27T04:36:45: %CISCO-6-INFO: %[pid=11971][pname=MainProcess]: Posted data to Kafka returning status code 200 within time 0:00:00.741100
+55: ng3k-tb8nd.cisco.com: 2022-07-27T04:36:45: %CONTRIB-6-INFO: %[pid=11971][pname=MainProcess]: WebEx Token not given as argument or in config. No WebEx notification will be sent

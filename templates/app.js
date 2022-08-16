@@ -1,0 +1,1 @@
+myVar = myFunc({{ data | tojson }})

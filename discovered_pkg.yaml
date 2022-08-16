@@ -1,0 +1,7 @@
+script:
+  /auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py:
+    modules:
+      RENN_data:
+        path: /auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_data.py
+      RENN_lib_1721:
+        path: /auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_lib_1721.py

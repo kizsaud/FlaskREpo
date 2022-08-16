@@ -1,0 +1,67 @@
++------------------------------------------------------------------------------+
+|                      !!! Exception in Task - Task-1 !!!                      |
++------------------------------------------------------------------------------+
+Traceback (most recent call last):
+  File "/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/aetest/main.py", line 193, in run
+    reporter = self.reporter)
+  File "/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/aetest/script.py", line 69, in from_source
+    module = loader.load(testable)
+  File "/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/utils/import_utils/flex.py", line 64, in load
+    module = self.load_module_from_file(obj)
+  File "/auto/iconatest-bgl/production/hcl/pyats3.6.3/lib/python3.6/site-packages/pyats/utils/import_utils/flex.py", line 117, in load_module_from_file
+    module = loader.load_module()
+  File "<frozen importlib._bootstrap_external>", line 399, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 823, in load_module
+  File "<frozen importlib._bootstrap_external>", line 682, in load_module
+  File "<frozen importlib._bootstrap>", line 265, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 684, in _load
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/ws/viselvar-sjc/DNAC_WiredClient_Auto/northbound/test/wired_client_assurance/wired_client_assurance.py", line 72, in <module>
+    from tkinter import Tcl
+  File "/auto/pysw/cel7x/python64/3.6.4/lib/python3.6/tkinter/__init__.py", line 36, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+ImportError: libtk8.4.so: wrong ELF class: ELFCLASS32
+
++------------------------------------------------------------------------------+
+|                                Easypy Report                                 |
++------------------------------------------------------------------------------+
+pyATS Instance   : /auto/iconatest-bgl/production/hcl/pyats3.6.3
+Python Version   : cpython-3.6.4 (64bit)
+CLI Arguments    : /auto/iconatest-bgl/production/hcl/pyats3.6.3/bin/easypy wired_client_assurance_job.py --testbed=/auto/date/enterprise/projects/preg/scripts/feature/dnac_assurance/data/wired_client_testbed_preg.yaml --config=/auto/date/enterprise/projects/preg/scripts/feature/dnac_assurance/data/wired_client_local_preg.json --script wired_client_assurance.py --input=/auto/iconatest-bgl/users/udasubra/preg/scripts/feature/dnac_assurance/data/wired_client_input_preg.json --controller_ip=10.126.109.107 --testbed_e2e=/auto/date/enterprise/projects/preg/scripts/feature/dnac_assurance/data/wired_client_topo_preg.yaml --device_list=edge-9300
+User             : udasubra
+Host Server      : bgl-ads-2809
+Host OS Version  : Red Hat Enterprise Linux 8.3 Ootpa (x86_64)
+
+Job Information
+    Name         : wired_client_assurance_job
+    Start time   : 2022-02-08 05:58:43.161702
+    Stop time    : 2022-02-08 05:58:48.575603
+    Elapsed time : 5.413901
+    Archive      : /auto/iconatest-bgl/production/hcl/pyats3.6.3/users/udasubra/archive/22-02/wired_client_assurance_job.2022Feb08_05:58:38.084587.zip
+
+Total Tasks    : 1 (1 failed to run)
+
+Overall Stats
+    Passed     : 0
+    Passx      : 0
+    Failed     : 0
+    Aborted    : 0
+    Blocked    : 0
+    Skipped    : 0
+    Errored    : 0
+
+    TOTAL      : 0
+
+Success Rate   : 0.00 %
+
++------------------------------------------------------------------------------+
+|                             Task Result Summary                              |
++------------------------------------------------------------------------------+
+Empty - did something go wrong?
+
++------------------------------------------------------------------------------+
+|                             Task Result Details                              |
++------------------------------------------------------------------------------+
+Empty - did something go wrong?

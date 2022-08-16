@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<jobSummary archiveFilename="/auto/iconatest/production/hcl/pyats3.6.4/users/tetitus/archive/22-07/RENN_test_job_1721_2.2022Jul27_04:21:57.381622.zip" atsTreePath="/auto/iconatest/production/hcl/pyats3.6.4">
+  <jobName>RENN_test_job_1721_2</jobName>
+  <image/>
+  <aborted>0</aborted>
+  <passed>2</passed>
+  <passx>0</passx>
+  <failed>0</failed>
+  <blocked>0</blocked>
+  <skipped>0</skipped>
+  <errored>4</errored>
+  <unknown>0</unknown>
+  <never_ran>0</never_ran>
+  <total>6</total>
+  <success_rate>33.33</success_rate>
+  <starttime>2022-07-27T04:23:41</starttime>
+  <stoptime>2022-07-27T04:35:54</stoptime>
+  <runtime>00:12:13</runtime>
+  <testbed>ng3k-tb8nd</testbed>
+  <release/>
+  <submitter>tetitus</submitter>
+  <user>tetitus</user>
+  <debugProfile>0</debugProfile>
+  <host>ng3k-tb8nd.cisco.com</host>
+</jobSummary>

@@ -1,0 +1,32 @@
+0
+ Caught an exception while executing section REP_config_and_verify_test:
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 837, in REP_config_and_verify_test
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+
+1
+]: Caught an exception while executing section REP_L2_convergence_setup:
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 883, in REP_L2_convergence_setup
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: +..........................................................+
+]: :                       STEPS Report                       :
+
+2
+]: Caught an exception while executing section REP_L2_convergence_cleanup:
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1265, in REP_L2_convergence_cleanup
+]:     (IxPort1[1], IxPort2[1]))
+]:   File "/auto/iconatest/production/hcl/pyats3.6.4/lib/python3.6/site-packages/pyats/tcl/interpreter.py", line 267, in eval
+]:     raise TclError(self.vars['::errorInfo']) from None
+]: _tkinter.TclError: can't read "streamID": no such variable
+]:     while executing
+]: "ixia::traffic_config   -mode remove -stream_id  $streamID -name REP_L2_TC_upstream -port_handle 1/11/1 -port_handle2 1/11/2"
+
+3
+]: Caught an exception while executing section REP_L2_convergence_setup:
+]:   File "/auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py", line 1386, in REP_L2_convergence_setup
+]:     for x in Interface_rep_info_port2)
+]: ValueError: dictionary update sequence element #0 has length 1; 2 is required
+]: +..........................................................+
+]: :                       STEPS Report                       :
+

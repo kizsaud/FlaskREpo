@@ -1,0 +1,245 @@
+# Primary datafile
+
+# Move this to parameters later and use job file
+
+ayy: 1
+bee: 5
+
+triggers_list: ['Apple', 'Orange', 'Strawberry', 'Mango']
+
+# template name
+template_name: 'l-detect'
+
+# Disable all interfaces initially to avoid loops - useful onetime activity
+# Script will configure and noshut the interfaces it needs coming from testbed yaml
+disable_all_interfaces: False
+
+# Negative tests - try applying template on vlan 99 
+negative_svi: '99'
+
+# Vlan on which we configure STP
+vlan_no_stp: '20'
+# total number Interfaces - take this from testbed yaml depending on how many interfaces you have between dut and peer_device
+total_number_interfaces: 4
+
+# TODO add check for .ixncfg extension - get this from job file args / tie it up to UUT / TOPO somehow
+
+max_outage_xfsu: 30
+max_outage_reload_fast: 30
+max_outage_issu: 2
+max_outage_reload: 300
+max_outage_switchover: 1
+
+show_logging_keywords:
+  - udld error detected on
+  - in err-disable state
+  - Too many retransmissions
+  - retransmissions
+  - from DOWN to DOWN
+  - SFF8472-3-THRESHOLD_VIOLATION
+  - err-disable
+  - ERR_DISABLE
+  - Duplicate address
+  - STORM_CONTROL
+  - Neighbor Down
+
+# - traceback
+# - Traceback
+# - TRACEBACK
+
+additional_configs:
+    # Disable PIM on Access A1 for xFSU
+    disable_pim_a1:
+        a1: |
+            ! 
+            interface GigabitEthernet1/0/12
+             no ip pim sparse-mode
+             no ipv6 pim
+            !
+            interface Port-channel3
+             no ip pim sparse-mode
+             no ipv6 pim
+            !
+            interface Loopback0
+             no ip pim sparse-mode
+             no ipv6 pim
+            !
+            interface Loopback3
+             no ip pim sparse-mode
+             no ipv6 pim
+            !
+    # Enable PIM on Access A1 for ISSU on D1 test
+    enable_pim_a1:
+        a1: |
+            ! 
+            interface GigabitEthernet1/0/12
+             ip pim sparse-mode
+             ipv6 pim
+            !
+            interface Port-channel3
+             ip pim sparse-mode
+             ipv6 pim
+            !
+            interface Loopback0
+             ip pim sparse-mode
+             ipv6 pim
+            !
+            interface Loopback3
+             ip pim sparse-mode
+             ipv6 pim
+            !
+    # Add a6
+    ospfv2_ospfv3_split:
+        a1: |
+            !
+            ipv6 nd reachable-time 3600000
+            router ospfv3 1
+             interface-id snmp-if-index
+             address-family ipv4 unicast
+              no redistribute ospf 2              
+            router ospf 2
+             network 172.16.254.1 0.0.0.0 area 0
+             network 192.168.254.0 0.0.0.255 area 0
+             bfd all-interfaces
+             nsf ietf
+            !
+            interface Port-channel3
+             description facing Core
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+        d1: |
+            !
+            ipv6 nd reachable-time 3600000
+            router ospf 2
+             network 172.16.254.1 0.0.0.0 area 0
+             network 192.168.254.0 0.0.0.255 area 0
+             bfd all-interfaces
+            !
+            interface Port-channel2
+             description facing Core
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+        core: |
+            !
+            ipv6 nd reachable-time 3600000
+            router ospf 2
+             network 172.16.254.1 0.0.0.0 area 0
+             network 192.168.254.0 0.0.0.255 area 0
+             bfd all-interfaces
+            !
+            interface Port-channel2
+             description Topo1 D1-9300-SVL
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+            interface Port-channel3
+             description Topo1 A1-N-9300-Standalone
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+    # Add a6
+    ospfv2_redistribute_ospfv3:
+        a1: |
+            !
+            ipv6 nd reachable-time 3600000
+            router ospfv3 1
+             interface-id snmp-if-index
+             address-family ipv4 unicast
+              redistribute ospf 2              
+            router ospf 2
+             network 172.16.254.1 0.0.0.0 area 0
+             no network 192.168.254.0 0.0.0.255 area 0
+             bfd all-interfaces
+             nsf ietf
+            !
+            !
+            interface Port-channel3
+             description facing Core
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+        d1: |
+            !
+            no router ospf 2
+            !
+            !
+            interface Port-channel2
+             description facing Core
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+        core: |
+            !
+            no router ospf 2
+            !
+            !
+            interface Port-channel2
+             description Topo1 D1-9300-SVL
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+            interface Port-channel3
+             description Topo1 A1-N-9300-Standalone
+             ospfv3 retransmit-interval 10
+             ip ospf retransmit-interval 10
+            !
+
+# Build Master List of All Possible Target ISSU Images
+images_list:
+    xe1762:
+        name: 'cat9k_iosxe.17.06.02.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.17.06.02.SPA.bin'
+    xe1733:
+        name: 'cat9k_iosxe.17.03.03.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.17.03.03.SPA.bin'
+    xe1734:
+        name: 'cat9k_iosxe.17.03.04.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.17.03.04.SPA.bin'
+    xe1735:
+        name: 'cat9k_iosxe.17.03.05.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.17.03.05.SPA.bin'
+    xe1761:
+        name: 'cat9k_iosxe.17.06.01.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.17.06.01.SPA.bin'
+    xe1763:
+        name: 'cat9k_iosxe_npe.17.06.03prd3.SPA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe_npe.17.06.03prd3.SPA.bin'
+    polaris_dev:
+        name: 'cat9k_iosxe.BLD_POLARIS_DEV_LATEST_20220220_160423_V17_9_0_2.SSA.bin'
+        location: '/ws/shmandal-sjc/biryani/images/cat9k_iosxe.BLD_POLARIS_DEV_LATEST_20220220_160423_V17_9_0_2.SSA.bin'
+
+DemoGenerator:
+    parameters:
+        ayy: 1
+        bee: 5
+        
+parameters:
+    ## Define all the required vlans, configured by switch
+    data_vlan: '100'
+    voice_vlan: '110'
+    dut: "d1"
+    ixia_device: "ixianative"
+    ixia_configuration_D1: '/ws/shmandal-sjc/biryani/ixia/biryani_final.ixncfg'
+    ixia_configuration: '/ws/shmandal-sjc/biryani/ixia/biryani_D1.ixncfg'
+
+# testcases:
+    # TC1_FunctionalTests:
+        # uid: TC1_FunctionalTests
+    # TC1_FunctionalTests[loopdetect_triggers=no_errdisable_recovery]:
+        # uid: TC1_FunctionalTests[loopdetect_triggers=no_errdisable_recovery]
+    # TC1_FunctionalTests[loopdetect_triggers=errdisable_recovery]:
+        # uid: TC1_FunctionalTests[loopdetect_triggers=errdisable_recovery]
+    # TC1_FunctionalTests[loopdetect_triggers=loopdetect_sourceport]:
+        # uid: TC1_FunctionalTests[loopdetect_triggers=loopdetect_sourceport]
+    # TC1_FunctionalTests[loopdetect_triggers=reload]:
+        # uid: TC1_FunctionalTests[loopdetect_triggers=reload]
+    # TC1_FunctionalTests[loopdetect_triggers=sso]:
+        # uid: TC1_FunctionalTests[loopdetect_triggers=sso]
+    # TC2_Negative:
+        # uid: TC2_Negative
+    # TC3_STP:
+        # uid: TC3_STP
+    # TC4_configure_replace:
+        # uid: TC4_configure_replace

@@ -1,0 +1,122 @@
++------------------------------------------------------------------------------+
+|                                Easypy Report                                 |
++------------------------------------------------------------------------------+
+pyATS Instance   : /ws/shmandal-sjc/pyats2021
+Python Version   : cpython-3.8.2 (64bit)
+CLI Arguments    : /ws/shmandal-sjc/pyats2021/bin/pyats run job biryani_job.py --testbed-file biryani_testbed.yaml --ixianame ixia1 --datafile biryani_datafile.yaml --device_under_test d1 --access a1 --core core --distribution d1 --operation switchover --target xe1763 --ixiacfg /ws/shmandal-sjc/biryani/ixia/biryani_Topo1_ISSU.ixncfg --config_change_list ospfv2_ospfv3_split enable_pim_a1 --release 1762CCOto1763PRD --image 1762CCOto1763PRD --branch 1762CCOto1763PRD --mail-subject Biryani Topo1 Switchover D1 1762CCO
+User             : shmandal
+Host Server      : sjc-ads-7048
+Host OS Version  : Red Hat Enterprise Linux 8.3 Ootpa (x86_64)
+
+Job Information
+    Name         : biryani_job
+    Start time   : 2022-03-04 01:20:30.560302-08:00
+    Stop time    : 2022-03-04 01:35:49.541811-08:00
+    Elapsed time : 918.981509
+    Archive      : /ws/shmandal-sjc/pyats2021/users/shmandal/archive/22-03/biryani_job.2022Mar04_01:20:22.085731.zip
+
+Total Tasks    : 1 
+
+Overall Stats
+    Passed     : 1
+    Passx      : 0
+    Failed     : 0
+    Aborted    : 1
+    Blocked    : 0
+    Skipped    : 0
+    Errored    : 0
+
+    TOTAL      : 2
+
+Success Rate   : 50.00 %
+
++------------------------------------------------------------------------------+
+|                             Task Result Summary                              |
++------------------------------------------------------------------------------+
+Task-1: biryani.common_setup                                              PASSED
+Task-1: biryani.BiryaniFunctionalTests[biryani_triggers=1]               ABORTED
+
++------------------------------------------------------------------------------+
+|                             Task Result Details                              |
++------------------------------------------------------------------------------+
+Task-1: biryani
+|-- common_setup                                                          PASSED
+|   |-- get_git_version                                                   PASSED
+|   |-- load_topology                                                     PASSED
+|   |-- parse_target_issu_image                                           PASSED
+|   |-- print_testbed_information                                         PASSED
+|   |-- clear_device_consoles                                             PASSED
+|   |-- connect_to_devices                                                PASSED
+|   |   |-- STEP 1: Connect to Device Device D1-9300-SVL (alias=d1)...    PASSED
+|   |   |-- STEP 2: Connect to Device Device Core (alias=core), typ...    PASSED
+|   |   `-- STEP 3: Connect to Device Device A1-N-9300-Standalone (...    PASSED
+|   |-- connect_to_ixia                                                   PASSED
+|   |-- disable_all_interfaces                                            PASSED
+|   |-- basic_configs                                                     PASSED
+|   |-- additional_configs                                                PASSED
+|   |   |-- STEP 1: Configure Additional Configs 
+|   |   |    !
+|   |   |   ipv6 nd reacha...    PASSED
+|   |   |-- STEP 2: Configure Additional Configs 
+|   |   |    !
+|   |   |   ipv6 nd reacha...    PASSED
+|   |   |-- STEP 3: Configure Additional Configs 
+|   |   |    !
+|   |   |   ipv6 nd reacha...    PASSED
+|   |   `-- STEP 4: Configure Additional Configs 
+|   |        ! 
+|   |       interface Gig...    PASSED
+|   `-- setup_show_commands                                               PASSED
+`-- BiryaniFunctionalTests[biryani_triggers=1]                           ABORTED
+    |-- biryani_setup                                                     PASSED
+    |-- pre_operation_check_syslog                                        PASSED
+    |   |-- STEP 1: Check Syslogs on Device D1-9300-SVL d1                PASSED
+    |   |-- STEP 1.1: Check Syslog udld error detected on                 PASSED
+    |   |-- STEP 1.2: Check Syslog in err-disable state                   PASSED
+    |   |-- STEP 1.3: Check Syslog Too many retransmissions               PASSED
+    |   |-- STEP 1.4: Check Syslog retransmissions                        PASSED
+    |   |-- STEP 1.5: Check Syslog from DOWN to DOWN                      PASSED
+    |   |-- STEP 1.6: Check Syslog SFF8472-3-THRESHOLD_VIOLATION          PASSED
+    |   |-- STEP 1.7: Check Syslog err-disable                            PASSED
+    |   |-- STEP 1.8: Check Syslog ERR_DISABLE                            PASSED
+    |   |-- STEP 1.9: Check Syslog Duplicate address                      PASSED
+    |   |-- STEP 1.10: Check Syslog STORM_CONTROL                         PASSED
+    |   |-- STEP 1.11: Check Syslog Neighbor Down                         PASSED
+    |   |-- STEP 2: Check Syslogs on Device Core core                     PASSED
+    |   |-- STEP 2.1: Check Syslog udld error detected on                 PASSED
+    |   |-- STEP 2.2: Check Syslog in err-disable state                   PASSED
+    |   |-- STEP 2.3: Check Syslog Too many retransmissions               PASSED
+    |   |-- STEP 2.4: Check Syslog retransmissions                        PASSED
+    |   |-- STEP 2.5: Check Syslog from DOWN to DOWN                      PASSED
+    |   |-- STEP 2.6: Check Syslog SFF8472-3-THRESHOLD_VIOLATION          PASSED
+    |   |-- STEP 2.7: Check Syslog err-disable                            PASSED
+    |   |-- STEP 2.8: Check Syslog ERR_DISABLE                            PASSED
+    |   |-- STEP 2.9: Check Syslog Duplicate address                      PASSED
+    |   |-- STEP 2.10: Check Syslog STORM_CONTROL                         PASSED
+    |   |-- STEP 2.11: Check Syslog Neighbor Down                         PASSED
+    |   |-- STEP 3: Check Syslogs on Device D1-9300-SVL d1                PASSED
+    |   |-- STEP 3.1: Check Syslog udld error detected on                 PASSED
+    |   |-- STEP 3.2: Check Syslog in err-disable state                   PASSED
+    |   |-- STEP 3.3: Check Syslog Too many retransmissions               PASSED
+    |   |-- STEP 3.4: Check Syslog retransmissions                        PASSED
+    |   |-- STEP 3.5: Check Syslog from DOWN to DOWN                      PASSED
+    |   |-- STEP 3.6: Check Syslog SFF8472-3-THRESHOLD_VIOLATION          PASSED
+    |   |-- STEP 3.7: Check Syslog err-disable                            PASSED
+    |   |-- STEP 3.8: Check Syslog ERR_DISABLE                            PASSED
+    |   |-- STEP 3.9: Check Syslog Duplicate address                      PASSED
+    |   |-- STEP 3.10: Check Syslog STORM_CONTROL                         PASSED
+    |   |-- STEP 3.11: Check Syslog Neighbor Down                         PASSED
+    |   |-- STEP 4: Check Syslogs on Device A1-N-9300-Standalone a1       PASSED
+    |   |-- STEP 4.1: Check Syslog udld error detected on                 PASSED
+    |   |-- STEP 4.2: Check Syslog in err-disable state                   PASSED
+    |   |-- STEP 4.3: Check Syslog Too many retransmissions               PASSED
+    |   |-- STEP 4.4: Check Syslog retransmissions                        PASSED
+    |   |-- STEP 4.5: Check Syslog from DOWN to DOWN                      PASSED
+    |   |-- STEP 4.6: Check Syslog SFF8472-3-THRESHOLD_VIOLATION          PASSED
+    |   |-- STEP 4.7: Check Syslog err-disable                            PASSED
+    |   |-- STEP 4.8: Check Syslog ERR_DISABLE                            PASSED
+    |   |-- STEP 4.9: Check Syslog Duplicate address                      PASSED
+    |   |-- STEP 4.10: Check Syslog STORM_CONTROL                         PASSED
+    |   `-- STEP 4.11: Check Syslog Neighbor Down                         PASSED
+    |-- biryani_test                                                      PASSED
+    `-- post_operation_check_status                                      ABORTED

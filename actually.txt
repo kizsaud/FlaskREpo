@@ -1,0 +1,12 @@
+ %SCRIPT-6-INFO: %[pid=13155][pname=Task-1]: ['Port-channel20   REP enabled', 'Segment-id: 1 (Edge No-Neighbor)', 'PortID: 08FC700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Alternate', 'Blocked VLAN: 1-4094', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5']
+
+ %AETEST-6-INFO: %[pid=13155][pname=Task-1]: The result of STEP 1: Obtain REP Interface details before Test Start is => ERRORED
+
+ %AETEST-6-INFO: %[part=464.3/3][pid=13155][pname=Task-1]: +------------------------------------------------------------------------------+
+
+ %AETEST-6-INFO: %[pid=13155][pname=Task-1]: The result of STEP 2: Obtain REP Interface details before Test Start is => ERRORED
+
+ %AETEST-6-INFO: %[pid=13155][pname=Task-1]: The result of STEP 6:  Stopping the TRAFFIC from IXIA is => ERRORED
+
+ %SCRIPT-6-INFO: %[pid=13155][pname=Task-1]: ['Port-channel20   REP enabled', 'Segment-id: 1 (Edge No-Neighbor)', 'PortID: 08FC700B4F373A00', 'Preferred flag: No', 'Operational Link Status: NO_NEIGHBOR', 'Current Key: 08FC700B4F373A000AB8', 'Port Role: Alternate', 'Blocked VLAN: 1-4094', 'Admin-vlan: 4', 'REP-ZTP Status: Not supported', 'REP Segment Id Auto Discovery Status: Not supported', 'Preempt Delay Timer: disabled', 'LSL Ageout Timer: 5000 ms', 'LSL Ageout Retries: 5']
+

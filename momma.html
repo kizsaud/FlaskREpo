@@ -1,0 +1,97 @@
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><style>
+    body {background-color: powderblue;}
+    h1 {color: GREEN;}
+  </style><h1>From Job:/ws/viselvar-sjc/test/logfile22/ren.zip<h1></head>
+
+
+  <body>
+
+
+ <script>   
+  var selectvalue = document.getElementById("selectvalue"), test = {{ name | tojson }};
+  var selectvalue2=document.getElementById("selectvalue"), test2 = {{ allresults | tojson }};;
+  
+function displayvar(){
+    var result = prompt('Type which detailed reason you would like to see');
+
+    alert(test[result])
+}
+function displayvar2(){
+    var result = prompt('type which testcase number youd like to see');
+
+    document.write(test2[result])
+  
+
+}
+</script>
+ 
+<script type="text/javascript">
+        $(document).ready(function () {
+
+$("#flip").click(function () {
+            $("#panel").slideToggle("slow");
+        });
+
+        $("#flip1").click(function () {
+            $("#panel1").slideToggle("slow");
+        });
+
+           //Filter table
+           $("#myInput").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").slice(1).filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+});
+            
+ });
+</script>
+<button class="displayvar" onclick="displayvar();"> Detailed reason</button>
+<button class="displayvar2" onclick="displayvar2();"> Testcase log </button>
+
+
+
+</body>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <body style="background-color:lightblue;">
+<div id="flip">Show table</div>
+   <div id="panel">
+   <br />
+   <span>Result Filter</span>
+    <input id="myInput" class="fortextbox" type="text" placeholder="Search.." >
+   <br /><br /><br />  
+VERSION INFO:*    1 34    WS-C3850-24XS      16.12.6           CAT3K_CAA-UNIVERSALK9 INSTALL
+<table id="myTable">
+<thead>
+<tr><th style="text-align: right;">  S.No</th><th>Testcase   </th><th>Result:  </th><th>SECTION                   </th><th>Reason                                                                  </th><th>Analysis    </th></tr>
+</thead>
+<tbody>
+<tr><td style="text-align: right;">     0</td><td>Tsz7693096c</td><td>ERRORED  </td><td>REP_config_and_verify_test</td><td>Error: dictionary update sequence element #0 has length 1; 2 is required</td><td>Script issue</td></tr>
+<tr><td style="text-align: right;">     1</td><td>Tsz7693111c</td><td>ERRORED  </td><td>REP_L2_convergence_setup  </td><td>Error: dictionary update sequence element #0 has length 1; 2 is required</td><td>Script issue</td></tr>
+<tr><td style="text-align: right;">     2</td><td>Tsz7693114c</td><td>ERRORED  </td><td>REP_L2_convergence_cleanup</td><td>Error: can&#x27;t read &quot;streamID&quot;: no such variable                          </td><td>Script issue</td></tr>
+<tr><td style="text-align: right;">     3</td><td>Tsz7693115c</td><td>ERRORED  </td><td>REP_L2_convergence_setup  </td><td>Error: dictionary update sequence element #0 has length 1; 2 is required</td><td>Script issue</td></tr>
+</tbody>
+</table></tbody><script>
+   function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[2];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+</script>

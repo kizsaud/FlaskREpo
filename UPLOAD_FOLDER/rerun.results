@@ -1,0 +1,21 @@
+# rerun.results file that contains the information of each task and their
+# testcases.
+# Please Check the following link for more information:
+# http://wwwin-pypyats.cisco.com/documentation/html/easypy/rerun.html
+Task-1:
+  commonCleanup:
+    name: common_cleanup
+    result: PASSED
+  commonSetup:
+    name: common_setup
+    result: PASSED
+  testcases:
+  - name: Tsz7693096c
+    result: ERRORED
+  - name: Tsz7693111c
+    result: ERRORED
+  - name: Tsz7693114c
+    result: ERRORED
+  - name: Tsz7693115c
+    result: ERRORED
+  testscript: /auto/iconatest/users/tetitus/pyats/projects/RENN/RENN_main1_1721.py

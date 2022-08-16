@@ -1,0 +1,20 @@
+
+2022-03-04 01:21:47,632: %UNICON-INFO: +++ D1-9300-SVL logfile /ws/shmandal-sjc/pyats2021/users/shmandal/runinfo/biryani_job.2022Mar04_01:20:22.085731/D1-9300-SVL-b-1646385707.log +++
+
+2022-03-04 01:21:47,632: %UNICON-INFO: +++ Unicon plugin iosxe/cat9k +++
+
+2022-03-04 01:21:53,486: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'term length 0' +++
+
+2022-03-04 01:21:53,695: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'term width 0' +++
+
+2022-03-04 01:21:53,914: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'show version' +++
+
+2022-03-04 01:29:52,090: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'show redundancy sta |  in peer' +++
+
+2022-03-04 01:29:52,310: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'show redundancy sta | inc Redundancy State' +++
+
+2022-03-04 01:33:37,933: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'term length 0' +++
+
+2022-03-04 01:33:38,179: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'term width 0' +++
+
+2022-03-04 01:33:38,456: %UNICON-INFO: +++ D1-9300-SVL with via 'b' and alias 'b': executing command 'show version' +++
